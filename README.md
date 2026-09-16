@@ -1,75 +1,72 @@
-# React + TypeScript + Vite
+# Guess the Premier League Footballer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An endless survival quiz. The game shows you a mystery Premier League footballer — nationality and position up front, club redacted — and you spend points to peel open clues or risk a guess. Correct calls pay out, misses cost you, and the bank hitting zero ends the show.
 
-Currently, two official plugins are available:
+## How it plays
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- You start with a **bank of 10 points** and a **streak of 0**.
+- Each of the 4 clues costs **−2**, in fixed order: early career → records → playstyle & shirt number → club reveal.
+- A wrong guess costs **−2**. A correct guess pays **+10** and extends your streak.
+- Bank at 0 or below, or hitting Give Up, ends the game.
+- Wrong guesses are logged with a directional hint: same club ("close") or different club.
+- Difficulty follows your streak across four tiers of players (icons → stars → breakouts → cult heroes), with no repeats until the pool is exhausted. Your best streak is saved in the browser.
 
-## React Compiler
+## Key features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Autocomplete search with keyboard navigation and position/club context per suggestion
+- Ordered, purchasable clue feed with a clearly marked next-to-open clue
+- Miss ledger with same-club / different-club feedback
+- Full-screen cinematic reveal on correct guesses and game over
+- Responsive layout with a sticky guess bar on mobile, plus reduced-motion support
+- Engine covered by runnable assertions (`scripts/engine-smoke.mjs`)
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19, TypeScript, Vite 8
+- No backend, no database, no external APIs — player data lives in local JSON
+- Fonts via Google Fonts (Archivo Black, Barlow Condensed, Inter) with system fallbacks
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Requires a recent Node.js LTS and npm.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Open the printed local URL (usually http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the dev server with hot reload |
+| `npm run build` | Type-check and produce a production build in `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint over the project |
+| `node scripts/engine-smoke.mjs` | Run the 14 game-engine assertions |
+
+## Environment variables
+
+None. There is nothing to configure — clone, install, run.
+
+## Project structure
 
 ```
+src/
+  App.tsx          # Game flow, screens, and UI state
+  main.tsx         # React entry point
+  index.css        # Design tokens
+  App.css          # Screen styles
+  game/engine.ts   # Bank economy, tiered draws, search, streak storage
+  data/players.json      # 160-player roster in 4 tiers
+  data/searchNames.json  # 767-name search index
+scripts/
+  engine-smoke.mjs  # Assertions against the real engine
+  build-rosters.js  # Roster generation helper
+```
+
+## Data
+
+The roster and clues are a hand-maintained local dataset — no live feeds, no scraping, no official affiliation with the Premier League or its clubs.
