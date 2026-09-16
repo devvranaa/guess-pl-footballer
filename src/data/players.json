@@ -1,0 +1,2242 @@
+[
+  {
+    "id": 1,
+    "name": "Thierry Henry",
+    "nationality": "France",
+    "position": "Forward",
+    "iconicClub": "Arsenal",
+    "tier": 1,
+    "bonusClues": [
+      "Graduated from the Clairefontaine academy and began his senior professional career as a winger at AS Monaco under Arsène Wenger.",
+      "Won a record 4 Premier League Golden Boots and spearheaded the iconic 2003-04 'Invincibles' undefeated league championship.",
+      "Wore shirt #14, immortalized by his silky swagger, blistering speed, and side-footed curled finish into the far right corner.",
+      "Iconic / Primary Club: Arsenal"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Wayne Rooney",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Scored a wonder goal at 16 years old against Arsenal in October 2002 to announce himself to world football with Everton.",
+      "Won 5 Premier League titles, a Champions League, and became his club's all-time top goalscorer with 253 goals.",
+      "Wore shirt #10 (and #8), nicknamed 'Wazza', known for bull-like combativeness, lung-bursting work rate, and overhead bicycle kicks.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Erling Haaland",
+    "nationality": "Norway",
+    "position": "Forward",
+    "iconicClub": "Manchester City",
+    "tier": 1,
+    "bonusClues": [
+      "Started senior football at Bryne FK before refining his predatory movement under Ole Gunnar Solskjær at Molde.",
+      "Shattered the all-time Premier League single-season goalscoring record with 36 goals in his debut 2022-23 season as part of a continental treble.",
+      "Wears shirt #9, nicknamed 'The Terminator', celebrated for explosive sprinting power, physical dominance, and a meditative lotus celebration.",
+      "Iconic / Primary Club: Manchester City"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Mohamed Salah",
+    "nationality": "Egypt",
+    "position": "Forward",
+    "iconicClub": "Liverpool",
+    "tier": 1,
+    "bonusClues": [
+      "Began in Egypt with Al Mokawloon before moving to Europe with Basel, Fiorentina, and AS Roma.",
+      "Won 3 Premier League Golden Boots, the 2019-20 Premier League title, and the 2019 Champions League, scoring 32 league goals in his first season.",
+      "Wears shirt #11, nicknamed 'The Egyptian King', famous for cutting inside onto his left foot, explosive acceleration, and yoga tree celebrations.",
+      "Iconic / Primary Club: Liverpool"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Cristiano Ronaldo",
+    "nationality": "Portugal",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Signed from Sporting CP in 2003 as an 18-year-old following a dazzling pre-season friendly against Sir Alex Ferguson's side.",
+      "Won 3 consecutive Premier League titles, the 2008 Champions League, and the 2008 Ballon d'Or during his initial spell in England.",
+      "Wore shirt #7, famous for stepovers, gravity-defying headers, dipping 'knuckleball' free-kicks, and the 'Siuuu' celebration.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Alan Shearer",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Newcastle United",
+    "tier": 1,
+    "bonusClues": [
+      "Began his top-flight career with Southampton, scoring a hat-trick on his full First Division debut at just 17 years old.",
+      "Remains the all-time Premier League top goalscorer with 260 goals and won the 1994-95 title with Blackburn Rovers.",
+      "Wore shirt #9, renowned for devastating headers, thunderous volleys, and his signature open-palm raised arm celebration.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Kevin De Bruyne",
+    "nationality": "Belgium",
+    "position": "Midfielder",
+    "iconicClub": "Manchester City",
+    "tier": 1,
+    "bonusClues": [
+      "Emerged through Genk's youth setup before a brief spell at Chelsea and an extraordinary Bundesliga Player of the Year campaign at Wolfsburg.",
+      "Won 6 Premier League titles and tied Thierry Henry's single-season assist record with 20 assists in 2019-20.",
+      "Wears shirt #17, heralded as the Premier League's greatest passer, famed for whipping laser-guided low crosses into the corridor of uncertainty.",
+      "Iconic / Primary Club: Manchester City"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Steven Gerrard",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Liverpool",
+    "tier": 1,
+    "bonusClues": [
+      "Joined his boyhood academy at age 9, fighting through multiple growth-spurt injuries before debuting in November 1998.",
+      "Captained his club to the 2005 Champions League 'Miracle of Istanbul' and scored an iconic 35-yard screamer in the 2006 FA Cup final.",
+      "Wore shirt #8, nicknamed 'Captain Fantastic', revered for crunching slide tackles, booming cross-field pings, and clutch long-range screamers.",
+      "Iconic / Primary Club: Liverpool"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Frank Lampard",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Chelsea",
+    "tier": 1,
+    "bonusClues": [
+      "Came through West Ham United's renowned academy where his father had been a legendary player and assistant coach.",
+      "The Premier League's all-time highest-scoring midfielder (177 goals) and Chelsea's all-time record goalscorer with 211 goals.",
+      "Wore shirt #8, nicknamed 'Super Frank', famous for his relentless box-to-box stamina and impeccable timing on late ghosting runs into the box.",
+      "Iconic / Primary Club: Chelsea"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Didier Drogba",
+    "nationality": "Ivory Coast",
+    "position": "Forward",
+    "iconicClub": "Chelsea",
+    "tier": 1,
+    "bonusClues": [
+      "Did not sign a professional contract until age 21 at Le Mans, later exploding onto the European scene with Marseille.",
+      "Won 4 Premier League titles and scored 9 goals in 9 cup finals, including the equalizing header and winning penalty in the 2012 Champions League final.",
+      "Wore shirt #11, feared as the ultimate big-game monster striker, known for brute physical presence and arms-outstretched knee-slide celebrations.",
+      "Iconic / Primary Club: Chelsea"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Eden Hazard",
+    "nationality": "Belgium",
+    "position": "Forward",
+    "iconicClub": "Chelsea",
+    "tier": 1,
+    "bonusClues": [
+      "Won back-to-back Ligue 1 Player of the Year awards with Lille before famously tweeting 'I'm signing for the champion's league winner'.",
+      "Won 2 Premier League titles, 2 Europa Leagues, and the 2014-15 PFA Players' Player of the Year.",
+      "Wore shirt #10, beloved for his low center-of-gravity dribbling, explosive bursts from the left wing, and effortless flair.",
+      "Iconic / Primary Club: Chelsea"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Sergio Agüero",
+    "nationality": "Argentina",
+    "position": "Forward",
+    "iconicClub": "Manchester City",
+    "tier": 1,
+    "bonusClues": [
+      "Debuted in the Argentine top flight at just 15 years and 35 days for Independiente before shining for Atlético Madrid.",
+      "Holds the record for the most hat-tricks in Premier League history (12) and scored the most famous 93:20 title-winning goal in 2012.",
+      "Wore shirt #10 (and #16), nicknamed 'Kun', known for blistering acceleration over 5 yards, low center-of-gravity, and lethal near-post finishing.",
+      "Iconic / Primary Club: Manchester City"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Eric Cantona",
+    "nationality": "France",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Played for Auxerre, Marseille, and Nîmes before arriving in England with Leeds United, where he won the 1991-92 First Division.",
+      "Transformed Manchester United into the dominant force of the Premier League era, winning 4 league titles in 5 seasons.",
+      "Wore shirt #7, nicknamed 'The King', famous for his upturned collar, supreme theatrical aura, and iconic chipped goal celebrations.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Dennis Bergkamp",
+    "nationality": "Netherlands",
+    "position": "Forward",
+    "iconicClub": "Arsenal",
+    "tier": 1,
+    "bonusClues": [
+      "Nurtured at Ajax's famed youth academy under Johan Cruyff before a difficult spell in Serie A with Inter Milan.",
+      "Key architect of 3 Premier League titles and the 2003-04 'Invincibles', winning the 1997-98 PFA Players' Player of the Year.",
+      "Wore shirt #10, nicknamed 'The Non-Flying Dutchman', renowned for godlike first touches and his pirouette goal against Newcastle in 2002.",
+      "Iconic / Primary Club: Arsenal"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Paul Scholes",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Part of the legendary 'Class of 92' alongside Beckham, Giggs, Butt, and the Neville brothers.",
+      "Won 11 Premier League titles and 2 Champions Leagues across a decorated one-club career with 718 appearances.",
+      "Wore shirt #18, nicknamed 'Sat-Nav', widely lauded by Zidane and Xavi as the cleanest ball-striker and long-range passer of his generation.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Roy Keane",
+    "nationality": "Republic of Ireland",
+    "position": "Midfielder",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Started in League of Ireland with Cobh Ramblers before Brian Clough signed him for Nottingham Forest in 1990.",
+      "Captained Manchester United to 7 Premier League titles and the historic 1998-99 Treble, delivering a legendary semi-final display in Turin.",
+      "Wore shirt #16, renowned as the ultimate enforcer captain, known for fierce combative intensity, tunnel showdowns, and incisive forward passing.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Patrick Vieira",
+    "nationality": "France",
+    "position": "Midfielder",
+    "iconicClub": "Arsenal",
+    "tier": 1,
+    "bonusClues": [
+      "Born in Dakar, Senegal, before moving to France and captaining Cannes at age 19, preceding a short spell with AC Milan.",
+      "Captained Arsenal's 2003-04 'Invincibles' to an undefeated league season and won 3 Premier League titles in North London.",
+      "Wore shirt #4, towering midfield powerhouse famed for box-to-box galloping strides, fierce Roy Keane rivalries, and Vicks VapoRub on his chest.",
+      "Iconic / Primary Club: Arsenal"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "John Terry",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Chelsea",
+    "tier": 1,
+    "bonusClues": [
+      "Joined Chelsea's youth academy at age 14 after playing Sunday league football with Senrab FC alongside Ledley King and Bobby Zamora.",
+      "Captained his club to 5 Premier League titles, 5 FA Cups, and a Champions League; anchored a defense that conceded a record-low 15 goals in 2004-05.",
+      "Wore shirt #26, nicknamed 'Captain, Leader, Legend', renowned for brave diving blocks, supreme leadership, and aerial goal threat.",
+      "Iconic / Primary Club: Chelsea"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Rio Ferdinand",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Graduated from West Ham United's youth system before a club-record move to Leeds United, captaining them to the Champions League semi-finals.",
+      "Became the world's most expensive defender in 2002, winning 6 Premier League titles and the 2008 Champions League.",
+      "Wore shirt #5, celebrated as the prototype modern ball-playing centre-back, famed for elegance on the ball, recovery pace, and defensive reading.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Petr Čech",
+    "nationality": "Czech Republic",
+    "position": "Goalkeeper",
+    "iconicClub": "Chelsea",
+    "tier": 1,
+    "bonusClues": [
+      "Began his career in Czech football with Chmel Blšany and Sparta Prague before moving to Rennes in Ligue 1.",
+      "Holds the Premier League all-time record for most clean sheets (202) and most clean sheets in a single season (24 in 2004-05).",
+      "Wore shirt #1, universally recognized for his protective rugby-style scrum cap following a severe head injury in 2006.",
+      "Iconic / Primary Club: Chelsea"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Peter Schmeichel",
+    "nationality": "Denmark",
+    "position": "Goalkeeper",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Worked in a textile factory and as an advert cleaner while playing for Hvidovre and Brøndby before moving to England in 1991.",
+      "Won 5 Premier League titles, 3 FA Cups, and captained his club in the dramatic 1999 Champions League final to complete the Treble.",
+      "Wore shirt #1, nicknamed 'The Great Dane', pioneer of the iconic 'starfish' jumping save and famous for booming shouts that terrified attackers.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Nemanja Vidić",
+    "nationality": "Serbia",
+    "position": "Defender",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Captained Red Star Belgrade to a domestic double and played for Spartak Moscow before signing on Christmas Day in 2005.",
+      "Two-time Premier League Player of the Season (one of only 4 players to win it twice) and won 5 Premier League titles.",
+      "Wore shirt #15, legendary Serbian warrior defender famous for his ruthless tackling chant: 'he comes from Serbia, he'll murder ya'.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Vincent Kompany",
+    "nationality": "Belgium",
+    "position": "Defender",
+    "iconicClub": "Manchester City",
+    "tier": 1,
+    "bonusClues": [
+      "Won Belgian Golden Shoe at Anderlecht and played for Hamburger SV before signing days prior to his club's seismic 2008 takeover.",
+      "Captained his club to 4 Premier League titles, including the 100-point 'Centurions' season and four domestic trophies in 2018-19.",
+      "Wore shirt #4, iconic captain revered for clutch goals, including his legendary 30-yard thunderbolt against Leicester City in May 2019.",
+      "Iconic / Primary Club: Manchester City"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "David Silva",
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "iconicClub": "Manchester City",
+    "tier": 1,
+    "bonusClues": [
+      "Developed in the Canary Islands before joining Valencia's youth setup, forming a deadly partnership with David Villa.",
+      "Won 4 Premier League titles and provided 93 Premier League assists, orchestrating his side's midfield for an entire decade.",
+      "Wore shirt #21, nicknamed 'El Mago' (The Magician), praised for his low center-of-gravity, pocket navigation, and sublime touch in congested spaces.",
+      "Iconic / Primary Club: Manchester City"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Yaya Touré",
+    "nationality": "Ivory Coast",
+    "position": "Midfielder",
+    "iconicClub": "Manchester City",
+    "tier": 1,
+    "bonusClues": [
+      "Trained at the famous ASEC Mimosas academy in Abidjan before spells across Europe with Beveren, Metalurh Donetsk, Olympiacos, and Monaco.",
+      "Scored 20 Premier League goals from midfield in 2013-14 and won 3 Premier League titles, having previously won the 2009 Treble at Barcelona.",
+      "Wore shirt #42, an unstoppable midfield locomotive capable of 60-yard rampaging runs, immaculate curling free-kicks, and ice-cold penalties.",
+      "Iconic / Primary Club: Manchester City"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Robin van Persie",
+    "nationality": "Netherlands",
+    "position": "Forward",
+    "iconicClub": "Arsenal",
+    "tier": 1,
+    "bonusClues": [
+      "Started his professional career at Feyenoord as a winger, winning the UEFA Cup in 2002 before joining Arsenal in 2004.",
+      "Won back-to-back Premier League Golden Boots (2011-12 and 2012-13) and fired Manchester United to their 20th league title in Sir Alex's final season.",
+      "Wore shirt #10 (and #20), famous for unplayable volleying technique, lethal left foot, and his nickname 'RVP'.",
+      "Iconic / Primary Club: Arsenal"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Harry Kane",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 1,
+    "bonusClues": [
+      "Was released by Arsenal's youth academy at age 8 and went on multiple lower-league loans to Leyton Orient, Millwall, Norwich, and Leicester.",
+      "Won 3 Premier League Golden Boots and became Tottenham's all-time top scorer (280 goals) while scoring 213 Premier League goals.",
+      "Wore shirt #10, nicknamed 'One of our own', known for elite penalty taking, clinical hold-up play, and quarter-back vision.",
+      "Iconic / Primary Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Son Heung-min",
+    "nationality": "South Korea",
+    "position": "Forward",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 1,
+    "bonusClues": [
+      "Moved to Germany as a 16-year-old to join Hamburger SV's academy before starring for Bayer Leverkusen in the Bundesliga.",
+      "Shared the 2021-22 Premier League Golden Boot with 23 non-penalty goals and won the 2020 FIFA Puskás Award for an 80-yard solo run.",
+      "Wears shirt #7, lethal two-footed finisher who serves as club captain and celebrates goals with his iconic 'camera snapshot' pose.",
+      "Iconic / Primary Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Bukayo Saka",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Arsenal",
+    "tier": 1,
+    "bonusClues": [
+      "Joined Arsenal's Hale End academy at age 7 and made his senior first-team debut in the Europa League as a 17-year-old.",
+      "Won back-to-back England Men's Player of the Year awards (2021-22, 2022-23) and scored in consecutive title chases.",
+      "Wears shirt #7, nicknamed 'Little Chilli', iconic left-footed right winger famous for agile dribbling and driving to the byline.",
+      "Iconic / Primary Club: Arsenal"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Cole Palmer",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Chelsea",
+    "tier": 1,
+    "bonusClues": [
+      "Joined Manchester City's academy at under-8 level, scoring in both the 2023 FA Community Shield and UEFA Super Cup before moving clubs.",
+      "Exploded in the 2023-24 season with over 20 Premier League goals, winning Premier League Young Player of the Season.",
+      "Wears shirt #20, nicknamed 'Cold Palmer', celebrated for unflappable penalty composure and his trademark shivering celebration.",
+      "Iconic / Primary Club: Chelsea"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Virgil van Dijk",
+    "nationality": "Netherlands",
+    "position": "Defender",
+    "iconicClub": "Liverpool",
+    "tier": 1,
+    "bonusClues": [
+      "Washed dishes in Breda while playing for Willem II's youth team, later breaking through with Groningen and Celtic in Scotland.",
+      "Won the 2018-19 Premier League Player of the Season, Champions League, and Premier League, famously going 65 games without being dribbled past.",
+      "Wears shirt #4, regarded as the most dominant defender of his era, celebrated for serene composure, aerial dominance, and 60-yard diagonal switches.",
+      "Iconic / Primary Club: Liverpool"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Alisson Becker",
+    "nationality": "Brazil",
+    "position": "Goalkeeper",
+    "iconicClub": "Liverpool",
+    "tier": 1,
+    "bonusClues": [
+      "Came through Internacional's youth ranks in Brazil before moving to Europe with AS Roma in Serie A.",
+      "Won the Premier League Golden Glove twice, the Champions League, and scored a dramatic 95th-minute headed winner against West Brom in 2021.",
+      "Wears shirt #1, renowned for 1v1 sweeping mastery, laser-accurate quarterback distributions, and his cool Brazilian beard.",
+      "Iconic / Primary Club: Liverpool"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "David Beckham",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Signed schoolboy forms with his boyhood club on his 14th birthday and spent a brief loan spell at Preston North End in 1995.",
+      "Won 6 Premier League titles and the 1999 Treble, famously scoring from the halfway line against Wimbledon in August 1996.",
+      "Wore shirt #7, global pop-culture icon renowned for his technique: bending curling crosses, whipped corners, and unstoppable free-kicks.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Ashley Cole",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Chelsea",
+    "tier": 1,
+    "bonusClues": [
+      "Raised in Stepney, London, and came through Arsenal's academy, debuting as an 18-year-old before a high-profile move across London in 2006.",
+      "Won 3 Premier League titles (including the 2003-04 Invincibles), a record 7 FA Cups, and the 2012 Champions League.",
+      "Wore shirt #3, widely considered the greatest left-back in Premier League history, famous for pocketing Cristiano Ronaldo in legendary battles.",
+      "Iconic / Primary Club: Chelsea"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Gary Neville",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Captain of the 1992 FA Youth Cup-winning team and spent his entire 19-year senior career as a one-club stalwart.",
+      "Won 8 Premier League titles, 2 Champions Leagues, and 3 FA Cups, accumulating 602 appearances for his club.",
+      "Wore shirt #2, celebrated for relentless overlapping runs down the right flank, pinpoint crosses for Beckham, and fierce Manchester passion.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Sol Campbell",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Arsenal",
+    "tier": 1,
+    "bonusClues": [
+      "Captained Tottenham Hotspur and made over 250 appearances before making an earth-shattering free transfer to their arch-rivals in 2001.",
+      "Key central defender for Arsenal's 2003-04 'Invincibles' and scored in the 2006 Champions League final against Barcelona.",
+      "Wore shirt #23, an imposing physical titan nicknamed 'The Rock', famous for devastating sliding recovery challenges and unmatched strength.",
+      "Iconic / Primary Club: Arsenal"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Ruud van Nistelrooy",
+    "nationality": "Netherlands",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 1,
+    "bonusClues": [
+      "Began as a central midfielder at Den Bosch before transforming into a predatory striker at Heerenveen and PSV Eindhoven.",
+      "Scored 150 goals in 219 games for his club, winning the 2002-03 Premier League title and holding a record 10-game scoring streak.",
+      "Wore shirt #10, nicknamed 'Ruud', the ultimate 18-yard box poacher who remarkably scored only one goal from outside the penalty area.",
+      "Iconic / Primary Club: Manchester United"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Sadio Mané",
+    "nationality": "Senegal",
+    "position": "Forward",
+    "iconicClub": "Liverpool",
+    "tier": 1,
+    "bonusClues": [
+      "Left his village of Bambali against his family's initial wishes to join Génération Foot in Dakar, later moving to Metz and Red Bull Salzburg.",
+      "Holds the Premier League record for the fastest hat-trick in history (2 minutes 56 seconds with Southampton) and won the 2019-20 league title.",
+      "Wore shirt #10, explosive winger renowned for relentless pressing, unpredictable dribbling, and mimicry of teammates' celebrations.",
+      "Iconic / Primary Club: Liverpool"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Cesc Fàbregas",
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "iconicClub": "Arsenal",
+    "tier": 1,
+    "bonusClues": [
+      "Signed from Barcelona's La Masia at age 16 in 2003, quickly becoming Arsenal's youngest-ever first-team player and goalscorer.",
+      "Ranks second all-time in Premier League assists (111 assists) and won 2 Premier League titles after later returning to England with Chelsea.",
+      "Wore shirt #4, renowned for his clairvoyant vision, exquisite chipped through-balls over backlines, and visionary midfield passing.",
+      "Iconic / Primary Club: Arsenal"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Michael Owen",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Liverpool",
+    "tier": 1,
+    "bonusClues": [
+      "Joined Liverpool's school of excellence at 12 and scored on his Premier League debut against Wimbledon in May 1997 at just 17.",
+      "Won 2 Premier League Golden Boots and became the only Premier League player to win the Ballon d'Or in the 21st century (2001).",
+      "Wore shirt #10, electrified world football with his uncatchable straight-line sprint speed and razor-sharp instinctive finishing.",
+      "Iconic / Primary Club: Liverpool"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Alexander Isak",
+    "nationality": "Sweden",
+    "position": "Forward",
+    "iconicClub": "Newcastle United",
+    "tier": 2,
+    "bonusClues": [
+      "Began his career in his hometown with AIK before playing for Borussia Dortmund, Willem II, and Real Sociedad.",
+      "Became his club's record signing in 2022 and scored over 20 Premier League goals in the 2023-24 campaign.",
+      "Wears shirt #14, heralded for electric acceleration, balletic footwork inside the box, and comparisons to Thierry Henry.",
+      "Iconic / Current Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Ollie Watkins",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Aston Villa",
+    "tier": 2,
+    "bonusClues": [
+      "Rose through Exeter City's academy and enjoyed a loan spell at Weston-super-Mare before firing Brentford to playoff glory.",
+      "Won the Premier League Playmaker of the Season award in 2023-24 with 19 goals and 13 assists to fire his club into the Champions League.",
+      "Wears shirt #11, known for relentless channel running, tireless pressing, and his famous hat-trick in a 7-2 thrashing of Liverpool.",
+      "Iconic / Current Club: Aston Villa"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Trent Alexander-Arnold",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Born in West Derby, Liverpool, he joined his boyhood club at age 6 and captained the club at various youth levels.",
+      "Won every major trophy with Liverpool including the Premier League and Champions League, setting the record for most assists by a defender.",
+      "Wears shirt #66, famous for redefining the modern inverted full-back role with world-class crossing and his quick-corner assist vs Barcelona.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Bruno Fernandes",
+    "nationality": "Portugal",
+    "position": "Midfielder",
+    "iconicClub": "Manchester United",
+    "tier": 2,
+    "bonusClues": [
+      "Developed in Portugal with Boavista before spending early senior years in Italy with Novara, Udinese, and Sampdoria.",
+      "Hit the ground running upon his arrival from Sporting CP in January 2020, consistently creating more chances than any other player in Europe.",
+      "Wears shirt #8, club captain celebrated for audacious trivela passes, pinpoint penalty hop-steps, and fiery midfield leadership.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Rodri",
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Came through Rayo Majadahonda and Atlético Madrid youth setups before breaking out at Villarreal and earning an economics degree.",
+      "Won the 2024 Ballon d'Or and 4 consecutive Premier League titles, scoring the historic winning goal in the 2023 Champions League final.",
+      "Wears shirt #16, universally hailed as the premier defensive midfield anchor, renowned for tactical intelligence and tucked-in shirts.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "William Saliba",
+    "nationality": "France",
+    "position": "Defender",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Coached by Kylian Mbappé's father at AS Bondy before developing at Saint-Étienne and shining on loan at Marseille.",
+      "Named in back-to-back PFA Premier League Teams of the Year, playing every single minute of the 2023-24 league campaign.",
+      "Wears shirt #2, known for cool-headed elegance under pressure, recovery tackles without fouling, and his 'Tequila' terrace chant.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Declan Rice",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Released by Chelsea's academy at age 14 before developing into club captain and Europa Conference League winner at West Ham United.",
+      "Moved across London in a British-record £105 million transfer in 2023, scoring dramatic stoppage-time winners against Man United and Luton.",
+      "Wears shirt #41, renowned for immense physical coverage, lung-bursting transitions, and laser-accurate corner deliveries.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Bernardo Silva",
+    "nationality": "Portugal",
+    "position": "Midfielder",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Graduated from Benfica's academy before starring in Leonardo Jardim's breathtaking Monaco side alongside Mbappé.",
+      "Won 6 Premier League titles and the 2023 Champions League Treble, consistently delivering in pivotal title run-ins.",
+      "Wears shirt #20, celebrated for velcro-like ball control, tireless off-the-ball pressing, and dribbling out of tight phone-booth spaces.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Alexis Mac Allister",
+    "nationality": "Argentina",
+    "position": "Midfielder",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Began his career at Argentinos Juniors before breaking into English football on the South Coast with Brighton & Hove Albion.",
+      "Started and assisted in the 2022 World Cup final for Argentina before winning the Carabao Cup in his debut season at Anfield.",
+      "Wears shirt #10, admired for silky midfield tempo setting, crunching combative tackles, and venomous long-range strikes.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Gabriel Magalhães",
+    "nationality": "Brazil",
+    "position": "Defender",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Started in Brazil with Avaí before moving to Europe with Lille, Dinamo Zagreb, and Troyes.",
+      "Formed the meanest defensive partnership in the Premier League alongside William Saliba, conceding the fewest goals in 2023-24.",
+      "Wears shirt #6, warrior-like left-footed centre-back feared as the Premier League's most lethal set-piece aerial goal threat.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Phil Foden",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Joined his boyhood club at under-9 level and served as a ballboy at the Etihad Stadium before his senior breakthrough.",
+      "Named 2023-24 Premier League Player of the Season and FWA Footballer of the Year after scoring 19 league goals.",
+      "Wears shirt #47, nicknamed 'The Stockport Iniesta', renowned for electric half-turn spins, magical close control, and sniper celebrations.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Martin Ødegaard",
+    "nationality": "Norway",
+    "position": "Midfielder",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Became a global wonderkid at age 15 for Strømsgodset before signing for Real Madrid and shining on loan at Real Sociedad.",
+      "Captained his club to consecutive 80+ point title charges, scoring 15 Premier League goals from midfield in 2022-23.",
+      "Wears shirt #8, club captain celebrated for intricate nutmegs, visionary through-balls, and leading an aggressive high press.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "James Maddison",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 2,
+    "bonusClues": [
+      "Rose through Coventry City's youth ranks and starred for Norwich City before winning the 2021 FA Cup with Leicester City.",
+      "Recorded double-digit assists in multiple Premier League seasons and won Premier League Player of the Month in August 2023.",
+      "Wears shirt #10, famous for dead-ball free-kick mastery, swaggering showmanship, and his signature dart-throwing celebration.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Jarrod Bowen",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "West Ham United",
+    "tier": 2,
+    "bonusClues": [
+      "Overcame the liquidation of Hereford United and starred for Hull City in the Championship before his Premier League switch.",
+      "Scored an iconic 90th-minute winner in Prague to seal the 2023 UEFA Europa Conference League trophy for his club.",
+      "Wears shirt #20, club captain known for relentless direct dribbling on his left foot and deadly back-post finishing.",
+      "Iconic / Current Club: West Ham United"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Emiliano Martínez",
+    "nationality": "Argentina",
+    "position": "Goalkeeper",
+    "iconicClub": "Aston Villa",
+    "tier": 2,
+    "bonusClues": [
+      "Spent a decade at Arsenal on six different lower-league loans before seizing his chance and winning the 2020 FA Cup.",
+      "Won back-to-back Yashin Trophies as the world's best goalkeeper, the 2022 World Cup Golden Glove, and guided his club to the Champions League.",
+      "Wears shirt #23, nicknamed 'Dibu', famous for psychological penalty shoot-out mind games and world-class reflexive stops.",
+      "Iconic / Current Club: Aston Villa"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "David Raya",
+    "nationality": "Spain",
+    "position": "Goalkeeper",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Moved to England from Cornellà at age 16 to join Blackburn Rovers, later earning promotion to the top flight with Brentford.",
+      "Won the 2023-24 Premier League Golden Glove with 16 clean sheets in his debut campaign in North London.",
+      "Wears shirt #22, acclaimed for aggressive sweeping off his line, dominant aerial box control, and pinpoint side-volley kicking.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Ederson",
+    "nationality": "Brazil",
+    "position": "Goalkeeper",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Developed in São Paulo and Benfica's academies, spending developmental years with Ribeirão and Rio Ave in Portugal.",
+      "Won 6 Premier League titles and 3 consecutive Premier League Golden Gloves (2020, 2021, 2022).",
+      "Wears shirt #31, revolutionized modern goalkeeping with ice-cold nerves under pressure and 80-yard laser drop-kicks to strikers.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Rúben Dias",
+    "nationality": "Portugal",
+    "position": "Defender",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Product of Benfica's Seixal academy, captaining the Lisbon giants before completing a marquee move to England in 2020.",
+      "Won FWA Footballer of the Year and Premier League Player of the Season in his debut 2020-21 campaign.",
+      "Wears shirt #3, celebrated for his commanding vocal leadership, bone-crunching blocks, and fist-pumping defensive passion.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Kyle Walker",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Grew up in Sheffield and developed at Sheffield United before spending eight influential years at Tottenham Hotspur.",
+      "Won 6 Premier League titles and captained his side to five trophies in 2023, including the Champions League.",
+      "Wears shirt #2, renowned as one of the fastest defenders in football history, legendary for recovery sprint chases against elite wingers.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "John Stones",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Came through Barnsley's academy before blossoming into a sought-after ball-playing talent under Roberto Martínez at Everton.",
+      "Won 6 Premier League titles and was the tactical revelation of the 2022-23 Treble, advancing from centre-back into central midfield.",
+      "Wears shirt #5, nicknamed the 'Barnsley Beckenbauer', celebrated for silky poise, goal-line clearances, and stoppage-time goals.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Andrew Robertson",
+    "nationality": "Scotland",
+    "position": "Defender",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Released by Celtic at 15 for being too small, working at Hampden Park while playing for Queen's Park, Dundee United, and Hull City.",
+      "Won every major club honor with Liverpool and sits near the top of the all-time Premier League assists chart for defenders.",
+      "Wears shirt #26, Scotland national team captain famous for ferocious overlapping runs, stamina, and wicked whipped crosses.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Kieran Trippier",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Newcastle United",
+    "tier": 2,
+    "bonusClues": [
+      "Developed in Manchester City's academy and played for Burnley before winning La Liga with Atlético Madrid under Diego Simeone.",
+      "First marquee signing of his club's new era in January 2022, leading them from the relegation zone into the Champions League.",
+      "Wears shirt #2, widely regarded for world-class set-piece delivery, whipped crossing accuracy, and veteran leadership.",
+      "Iconic / Current Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Gabriel Martinelli",
+    "nationality": "Brazil",
+    "position": "Forward",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Played futsal for Corinthians and senior football for Ituano in the São Paulo state league before a £6 million move in 2019.",
+      "Scored 15 Premier League goals in the 2022-23 campaign to tie the record for the most goals by a Brazilian in a single PL season.",
+      "Wears shirt #11, explosive left-winger famous for blistering speed, tireless defensive pressing, and his famous solo run at Stamford Bridge.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Kai Havertz",
+    "nationality": "Germany",
+    "position": "Forward",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Became Bayer Leverkusen's youngest-ever Bundesliga debutant and goalscorer before moving to England in 2020.",
+      "Scored the winning goal in the 2021 Champions League final for Chelsea and revitalized his career with 13 league goals for Arsenal in 2023-24.",
+      "Wears shirt #29, elegant forward known for clever decoy runs, aerial dueling prowess, and clutch front-line pressing.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Gabriel Jesus",
+    "nationality": "Brazil",
+    "position": "Forward",
+    "iconicClub": "Arsenal",
+    "tier": 2,
+    "bonusClues": [
+      "Rose to fame painting the streets of favelas during the 2014 World Cup before winning the Brazilian league with Palmeiras.",
+      "Won 4 Premier League titles with Manchester City, including the 100-point 'Centurions' season with a 94th-minute winner at Southampton.",
+      "Wears shirt #9, renowned for nimble street-dribbling in the penalty box, relentless pressing, and his 'Alo Mãe' phone celebration.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Diogo Jota",
+    "nationality": "Portugal",
+    "position": "Forward",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Came through Paços de Ferreira before playing for Atlético Madrid, Porto, and spearheading Wolves' rise into the Premier League.",
+      "Won both domestic cups in 2022 and scored vital Premier League winners off the bench in multiple title challenges.",
+      "Wears shirt #20, lethal ambipedal finisher celebrated for instinctive movement, surprising aerial heading ability, and elite FIFA esports skills.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Luis Díaz",
+    "nationality": "Colombia",
+    "position": "Forward",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Emerged from the indigenous Wayuu community to play for Barranquilla and Junior before illuminating Europe with Porto.",
+      "Hit the ground running upon his January 2022 arrival, winning the FA Cup and Carabao Cup and playing in a Champions League final in his first months.",
+      "Wears shirt #7, nicknamed 'Lucho', electric left winger celebrated for serpentine hip-feints, elastic dribbling, and never-say-die work rate.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Darwin Núñez",
+    "nationality": "Uruguay",
+    "position": "Forward",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Developed in Peñarol's youth system under tough conditions in Artigas before starring in Europe with Almería and Benfica.",
+      "Scored on his Premier League and Champions League debuts for Liverpool and netted an iconic 99th-minute winner at Nottingham Forest.",
+      "Wears shirt #9, an agents-of-chaos physical juggernaut famed for breakneck sprint speeds, thunderous strikes, and non-stop running.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Dominik Szoboszlai",
+    "nationality": "Hungary",
+    "position": "Midfielder",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Trained intensely under his father's academy Főnix Gold before blossoming across the Red Bull network with Salzburg and Leipzig.",
+      "Captained Hungary to Euro 2024 and won the 2024 Carabao Cup in his debut season in English football.",
+      "Wears shirt #8, admired for his explosive ballistic shooting technique, rapid transition sprints, and booming long-range strikes.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Cody Gakpo",
+    "nationality": "Netherlands",
+    "position": "Forward",
+    "iconicClub": "Liverpool",
+    "tier": 2,
+    "bonusClues": [
+      "Born in Eindhoven and joined PSV's academy at age 8, winning Dutch Footballer of the Year before shining at the 2022 World Cup.",
+      "Won the 2024 Carabao Cup and shared the Golden Boot at Euro 2024 with 3 goals.",
+      "Wears shirt #18, versatile attacker known for his physical 6ft 4in frame, smart link-up play, and curling finishes from the left wing.",
+      "Iconic / Current Club: Liverpool"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Jack Grealish",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Manchester City",
+    "tier": 2,
+    "bonusClues": [
+      "Boyhood fan who joined Aston Villa at age six, captaining them to Premier League promotion and survival.",
+      "Became Britain's first £100 million player in 2021, winning 3 Premier League titles and starting in the 2023 Champions League final.",
+      "Wears shirt #10, beloved for rolled-down socks, tiny shin pads, calf muscles, and winning fouls with his close-control dribbling.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Marcus Rashford",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 2,
+    "bonusClues": [
+      "Joined his club's academy at age seven, scoring twice on his surprise senior debut in the Europa League and twice on his Premier League debut.",
+      "Scored 30 goals across all competitions in 2022-23, winning the Sir Matt Busby Player of the Year and multiple domestic trophies.",
+      "Wears shirt #10, awarded an MBE for social campaigns, renowned for blistering pace, dipping knuckleball shots, and his temple-tap celebration.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Alejandro Garnacho",
+    "nationality": "Argentina",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 2,
+    "bonusClues": [
+      "Born in Madrid and developed in Atlético Madrid's academy before moving to England as a 16-year-old in 2020.",
+      "Scored an astonishing bicycle kick against Everton in November 2023 (Premier League Goal of the Season) and scored in the 2024 FA Cup final.",
+      "Wears shirt #17, explosive dynamic winger known for direct fearlessness against full-backs and his Cristiano Ronaldo-inspired celebrations.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Kobbie Mainoo",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Manchester United",
+    "tier": 2,
+    "bonusClues": [
+      "Joined his club's academy at age nine in Cheadle Hulme, winning the 2022 FA Youth Cup.",
+      "Scored an unforgettable 97th-minute winner at Molineux and scored the winning goal in the 2024 FA Cup final against Manchester City.",
+      "Wears shirt #37, celebrated for unfazed composure under pressure, tight-body swivels, and silky retention in midfield.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Casemiro",
+    "nationality": "Brazil",
+    "position": "Midfielder",
+    "iconicClub": "Manchester United",
+    "tier": 2,
+    "bonusClues": [
+      "Captained São Paulo's youth sides before becoming an indispensable anchor in Real Madrid's historic five Champions League triumphs.",
+      "Transformed his side's midfield upon arriving in 2022, scoring in the 2023 Carabao Cup final to end a six-year trophy drought.",
+      "Wears shirt #18, veteran defensive midfield general famed for crunching tackles, no-look line-breaking passes, and passionate fist pumps.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Dejan Kulusevski",
+    "nationality": "Sweden",
+    "position": "Forward",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 2,
+    "bonusClues": [
+      "Developed at Brommapojkarna in Sweden before moving to Atalanta and winning Serie A Best Young Player with Parma.",
+      "Produced 8 assists in his first 18 Premier League games in 2022 and emerged as one of the league's top chance creators.",
+      "Wears shirt #21, robust left-footed attacker renowned for brute strength, high-energy running, and cutting inside to whip crosses.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Cristian Romero",
+    "nationality": "Argentina",
+    "position": "Defender",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 2,
+    "bonusClues": [
+      "Started with Belgrano in Argentina before earning Serie A Best Defender honors at Atalanta.",
+      "Won the 2022 World Cup and two Copa América titles with Argentina while serving as vice-captain in North London.",
+      "Wears shirt #17, nicknamed 'Cuti', feared for aggressive front-foot tackling, aerial command, and intense physical duels.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Micky van de Ven",
+    "nationality": "Netherlands",
+    "position": "Defender",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 2,
+    "bonusClues": [
+      "Developed in the Netherlands with Volendam under Wim Jonk before showcasing world-class pace at VfL Wolfsburg.",
+      "Recorded the highest sprint speed ever measured in Premier League history (37.38 km/h) in his debut 2023-24 season.",
+      "Wears shirt #37, towering 6ft 4in left-footed centre-back famous for recovery slide tackles and solo 70-yard galloping runs.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Anthony Gordon",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Newcastle United",
+    "tier": 2,
+    "bonusClues": [
+      "Joined Everton's academy at age 11, making his senior debut at 16 in the Europa League before a £45 million move north.",
+      "Named Newcastle Player of the Year in 2023-24 after reaching double digits in both goals and assists in the Premier League.",
+      "Wears shirt #10, rapid and tenacious left winger famous for his tireless work rate, winning penalties, and direct one-on-one running.",
+      "Iconic / Current Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Bruno Guimarães",
+    "nationality": "Brazil",
+    "position": "Midfielder",
+    "iconicClub": "Newcastle United",
+    "tier": 2,
+    "bonusClues": [
+      "Emerged with Athletico Paranaense in Brazil before moving to Europe with Lyon and winning Olympic gold with Brazil.",
+      "The talismanic signing of his club's project in January 2022, leading them from the drop zone to Champions League qualification.",
+      "Wears shirt #39 (in tribute to his father's taxi number), club captain renowned for pirouettes, tenacity, and trivela through-balls.",
+      "Iconic / Current Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Savinho",
+    "nationality": "Brazil",
+    "position": "Forward",
+    "iconicClub": "Manchester City",
+    "tier": 3,
+    "bonusClues": [
+      "Developed in Brazil with Atlético Mineiro before shining on loan at Girona in La Liga, propelling them into the Champions League.",
+      "Signed for Manchester City in the summer of 2024, immediately breaking into the starting XI with electric 1v1 wing play.",
+      "Wears shirt #26, explosive Brazilian winger famed for his blistering burst of acceleration and Brazilian street dribbling flair.",
+      "Iconic / Current Club: Manchester City"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Oscar Bobb",
+    "nationality": "Norway",
+    "position": "Forward",
+    "iconicClub": "Fulham",
+    "tier": 3,
+    "bonusClues": [
+      "Spent his early developmental years in Portugal at Porto's youth ranks and Vålerenga before joining Manchester City's academy in 2019.",
+      "Scored a stunning stoppage-time winner at St James' Park to win Premier League Goal of the Month before a marquee move across the league to Fulham.",
+      "Wears shirt #11, silky Norwegian winger celebrated for intricate close control, deceptive body swivels, and low center-of-gravity.",
+      "Iconic / Current Club: Fulham"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Dominic Solanke",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 3,
+    "bonusClues": [
+      "Came through Chelsea's academy and had spells with Vitesse and Liverpool before exploding into a prolific number nine at Bournemouth.",
+      "Scored 19 Premier League goals in 2023-24, earning a blockbuster £65 million summer transfer to Tottenham Hotspur in 2024.",
+      "Wears shirt #19, dynamic physical striker famous for intelligent pressing, aerial dominance, and anime-inspired goal celebrations.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Emile Smith Rowe",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Fulham",
+    "tier": 3,
+    "bonusClues": [
+      "Joined Arsenal's Hale End academy at age 10, enjoying formative development loans with RB Leipzig and Huddersfield Town.",
+      "Became Fulham's club-record signing in the summer of 2024, revitalizing his career with instant goals and creative spark at Craven Cottage.",
+      "Wears shirt #32, nicknamed 'The Croydon De Bruyne', loved for drifting into half-spaces, slick one-touch link-ups, and rolled-down socks.",
+      "Iconic / Current Club: Fulham"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Pedro Neto",
+    "nationality": "Portugal",
+    "position": "Forward",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Developed at Braga and Lazio before establishing himself as one of the Premier League's most feared wingers at Wolves.",
+      "Completed a high-profile £54 million transfer to Chelsea in August 2024 after finishing among the league's top assist providers.",
+      "Wears shirt #7, direct speedster known for devastating sprint bursts down both wings and whipping low crosses across the 6-yard box.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Liam Delap",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Ipswich Town",
+    "tier": 3,
+    "bonusClues": [
+      "Son of Premier League throw-in legend Rory Delap, he developed at Derby County before shining in Manchester City's Elite Development Squad.",
+      "Signed for newly promoted Ipswich Town in 2024 and exploded with clinical Premier League goals against Aston Villa and Fulham.",
+      "Wears shirt #19, powerful physical bulldozer of a centre-forward renowned for charging straight through defensive lines and venomous finishing.",
+      "Iconic / Current Club: Ipswich Town"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Morgan Rogers",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Aston Villa",
+    "tier": 3,
+    "bonusClues": [
+      "Began his journey at West Bromwich Albion and Manchester City before enjoying a prolific stint at Middlesbrough under Michael Carrick.",
+      "Joined Unai Emery's Aston Villa in January 2024 and became a Champions League sensation and senior England international in late 2024.",
+      "Wears shirt #27, towering attacking midfielder known for driving ball-carrying runs, brute physical balance, and cold celebrations.",
+      "Iconic / Current Club: Aston Villa"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Riccardo Calafiori",
+    "nationality": "Italy",
+    "position": "Defender",
+    "iconicClub": "Arsenal",
+    "tier": 3,
+    "bonusClues": [
+      "Developed at AS Roma and overcame a career-threatening knee injury before leading Bologna into the Champions League under Thiago Motta.",
+      "Starred at Euro 2024 for Italy and completed a £42 million transfer to Arsenal, scoring an unforgettable curling screamer at the Etihad.",
+      "Wears shirt #33, charismatic Italian defender with flowing locks, famous for aggressive interceptions and stepping into midfield.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Yankuba Minteh",
+    "nationality": "Gambia",
+    "position": "Forward",
+    "iconicClub": "Brighton & Hove Albion",
+    "tier": 3,
+    "bonusClues": [
+      "Discovered in The Gambia before playing for OB in Denmark and winning the Dutch Cup on loan at Feyenoord under Arne Slot.",
+      "Completed a marquee £30 million transfer to Brighton & Hove Albion in the summer of 2024, becoming an instant starting winger.",
+      "Wears shirt #17, explosive left-footed Gambian winger renowned for supersonic sprint speed and aggressive defensive pressing.",
+      "Iconic / Current Club: Brighton & Hove Albion"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Elliot Anderson",
+    "nationality": "Scotland",
+    "position": "Midfielder",
+    "iconicClub": "Nottingham Forest",
+    "tier": 3,
+    "bonusClues": [
+      "Grew up in Newcastle's academy, earning the nickname 'Geordie Maradona' during a scintillating promotion loan with Bristol Rovers.",
+      "Joined Nottingham Forest in a high-profile £35 million summer 2024 deal, quickly establishing himself as Forest's midfield engine.",
+      "Wears shirt #8, tenacious box-to-box midfielder famed for high-energy ball recovery, snappy tackling, and incisive forward bursts.",
+      "Iconic / Current Club: Nottingham Forest"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Lewis Hall",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Newcastle United",
+    "tier": 3,
+    "bonusClues": [
+      "Chelsea academy graduate and 2023 Academy Player of the Year who supported Newcastle United as a boy.",
+      "Converted his initial loan into a permanent £28 million transfer to Newcastle, earning his senior England debut in late 2024.",
+      "Wears shirt #20, technical modern left-back known for crisp passing under pressure, underlapping runs, and defensive timing.",
+      "Iconic / Current Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Omari Hutchinson",
+    "nationality": "Jamaica",
+    "position": "Forward",
+    "iconicClub": "Ipswich Town",
+    "tier": 3,
+    "bonusClues": [
+      "Developed through Arsenal and Chelsea's youth setups, mesmerizing online football fans with freestyle street skills as a kid.",
+      "Fired Ipswich Town to automatic Premier League promotion with 10 goals in 2023-24 before completing a club-record permanent move.",
+      "Wears shirt #20, dynamic inverted winger known for explosive agility, razor-sharp stepovers, and cutting onto his left foot.",
+      "Iconic / Current Club: Ipswich Town"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Carlos Baleba",
+    "nationality": "Cameroon",
+    "position": "Midfielder",
+    "iconicClub": "Brighton & Hove Albion",
+    "tier": 3,
+    "bonusClues": [
+      "Born in Douala, Cameroon, he honed his trade at the Brasseries du Cameroun academy before breaking out in Ligue 1 with Lille.",
+      "Identified as Moisés Caicedo's long-term successor at Brighton, blossoming into one of the most dominant young midfielders in Europe.",
+      "Wears shirt #20, dynamic physical powerhouse admired for lung-bursting midfield recoveries, resisting press, and thunderous strikes.",
+      "Iconic / Current Club: Brighton & Hove Albion"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Joshua Zirkzee",
+    "nationality": "Netherlands",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 3,
+    "bonusClues": [
+      "Developed in the Netherlands with Feyenoord and Bayern Munich, inspiring Bologna's historic Champions League qualification under Thiago Motta.",
+      "Signed for Manchester United in July 2024 and scored an unforgettable 87th-minute winner on his Premier League debut against Fulham.",
+      "Wears shirt #11, uniquely framed 6ft 4in centre-forward who plays like a classic #10 with silky first touches and back-to-goal link play.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Amad Diallo",
+    "nationality": "Ivory Coast",
+    "position": "Forward",
+    "iconicClub": "Manchester United",
+    "tier": 3,
+    "bonusClues": [
+      "Born in Abidjan, Ivory Coast, he rose through Atalanta's academy before completing a £37 million package deal to England in 2021.",
+      "Scored an iconic 121st-minute extra-time winner against Liverpool in the 2024 FA Cup quarter-final on the way to lifting the trophy.",
+      "Wears shirt #16, gifted left-footed winger celebrated for close-quarter balance, unpredictable feints, and curling finishes.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Manuel Ugarte",
+    "nationality": "Uruguay",
+    "position": "Midfielder",
+    "iconicClub": "Manchester United",
+    "tier": 3,
+    "bonusClues": [
+      "Captained Fénix in Uruguay as a teenager before starring for Sporting CP in Lisbon and winning Ligue 1 with Paris Saint-Germain.",
+      "Completed a marquee summer 2024 deadline-day transfer to Manchester United to anchor their midfield spine.",
+      "Wears shirt #25, South American ball-winning pitbull who regularly tops European charts for ground duels and slide tackles.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Matthijs de Ligt",
+    "nationality": "Netherlands",
+    "position": "Defender",
+    "iconicClub": "Manchester United",
+    "tier": 3,
+    "bonusClues": [
+      "Became Ajax's youngest-ever captain at age 19, leading them to the Champions League semi-finals and winning the Golden Boy award.",
+      "Won league titles in the Netherlands, Italy (Juventus), and Germany (Bayern Munich) before reuniting with Erik ten Hag in 2024.",
+      "Wears shirt #4, commanding aerial commander and vocal leader known for physical bravery, block tackles, and towering headers.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Noussair Mazraoui",
+    "nationality": "Morocco",
+    "position": "Defender",
+    "iconicClub": "Manchester United",
+    "tier": 3,
+    "bonusClues": [
+      "Product of Ajax's youth academy who helped Morocco make history by reaching the 2022 World Cup semi-finals.",
+      "Won three Eredivisie titles and a Bundesliga title before joining Manchester United in August 2024 as an instant starter.",
+      "Wears shirt #3, versatile full-back known for flawless press resistance, silky technical footwork, and tactical intelligence.",
+      "Iconic / Current Club: Manchester United"
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Moisés Caicedo",
+    "nationality": "Ecuador",
+    "position": "Midfielder",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Grew up as the youngest of 10 siblings playing on dirt pitches in Santo Domingo, Ecuador, before breaking through with Independiente del Valle.",
+      "Commanded a British-record £115 million transfer fee in the summer of 2023 after orchestrating Brighton's historic European qualification.",
+      "Wears shirt #25, relentless tackling machine praised for supreme defensive anticipation, interception radius, and halfway-line goals.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Enzo Fernández",
+    "nationality": "Argentina",
+    "position": "Midfielder",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Developed at River Plate and Defensa y Justicia in Argentina before taking Europe by storm with Benfica.",
+      "Won the 2022 World Cup with Argentina, claiming the Young Player of the Tournament award prior to a British-record £107 million transfer.",
+      "Wears shirt #8, deep-lying midfield metronome renowned for visionary scooped passes, diagonal switches, and high work rate.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Nicolas Jackson",
+    "nationality": "Senegal",
+    "position": "Forward",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Born in The Gambia and represented Senegal, rising through Casa Sports before shining in La Liga with Villarreal.",
+      "Scored 14 Premier League goals in his debut 2023-24 season (including a hat-trick at Tottenham) and started the 2024-25 season in red-hot form.",
+      "Wears shirt #15, dynamic forward renowned for ferocious channel-running, selfless link play, and his signature 'Siu' and dance celebrations.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Noni Madueke",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Left Tottenham's academy at 16 to forge his path abroad in the Netherlands with PSV Eindhoven before returning to London in 2023.",
+      "Scored an astonishing 14-minute second-half hat-trick away at Wolves in August 2024 and earned his senior England debut shortly after.",
+      "Wears shirt #11, direct right-wing attacker renowned for aggressive 1v1 isolation dribbling and cutting inside on his left foot.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Levi Colwill",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Joined Chelsea's academy at under-9 level, enjoying a crucial promotion loan with Huddersfield and a breakout Premier League loan at Brighton.",
+      "Anchored England's defense without conceding a single goal in their 2023 Under-21 European Championship triumph.",
+      "Wears shirt #6, cultured left-footed centre-back famous for spraying 50-yard diagonal passes and aggressive aerial dominance.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Marc Cucurella",
+    "nationality": "Spain",
+    "position": "Defender",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Graduated from Barcelona's La Masia academy, establishing his reputation in Spain with Eibar and Getafe before moving to Brighton.",
+      "Named in the Euro 2024 Team of the Tournament as Spain's starting left-back, assisting the winning goal in the final against England.",
+      "Wears shirt #3, instantly recognizable by his voluminous curly hair and aggressive, tenacious front-foot tackling style.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Malo Gusto",
+    "nationality": "France",
+    "position": "Defender",
+    "iconicClub": "Chelsea",
+    "tier": 3,
+    "bonusClues": [
+      "Developed through Lyon's esteemed youth academy in France, converting from an attacking midfielder into an elite right-back.",
+      "Emerged as one of the Premier League's most productive full-backs in 2023-24, registering 9 assists across all competitions.",
+      "Wears shirt #27, rapid full-back known for blistering recovery speed, tight 1v1 defensive duels, and pinpoint low crosses.",
+      "Iconic / Current Club: Chelsea"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Jurriën Timber",
+    "nationality": "Netherlands",
+    "position": "Defender",
+    "iconicClub": "Arsenal",
+    "tier": 3,
+    "bonusClues": [
+      "Product of Ajax's famed academy alongside his twin brother Quinten, winning back-to-back Eredivisie titles in Amsterdam.",
+      "Suffered an ACL injury on his Premier League debut in August 2023 before returning in 2024 to become an indispensable defensive starter.",
+      "Wears shirt #12, versatile Dutch defender celebrated for press-resistant dribbling from full-back and physical aggression.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Ethan Nwaneri",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Arsenal",
+    "tier": 3,
+    "bonusClues": [
+      "Joined Arsenal's academy at age nine, dominating youth tournaments while playing multiple years above his age group.",
+      "Became the youngest player in Premier League history in September 2022 when he debuted against Brentford at just 15 years and 181 days old.",
+      "Wears shirt #53, left-footed playmaking jewel renowned for quick feet, fearless ball carrying, and thunderous long-range strikes.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Myles Lewis-Skelly",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Arsenal",
+    "tier": 3,
+    "bonusClues": [
+      "Joined Arsenal at under-9 level alongside Ethan Nwaneri, starring in their run to the 2023 FA Youth Cup final.",
+      "Famously made headlines for receiving a yellow card on the bench at the Etihad before making his senior Premier League debut in that same match in 2024.",
+      "Wears shirt #49, supremely gifted inverted full-back admired for his composure under pressure and gliding midfield turns.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Mikel Merino",
+    "nationality": "Spain",
+    "position": "Midfielder",
+    "iconicClub": "Arsenal",
+    "tier": 3,
+    "bonusClues": [
+      "Began with Osasuna before spells with Borussia Dortmund and Newcastle United, later winning the 2020 Copa del Rey with Real Sociedad.",
+      "Scored a dramatic 119th-minute quarter-final header for Spain at Euro 2024 on their way to lifting the European Championship.",
+      "Wears shirt #23, dominant midfield duel monster who led Europe's top five leagues in ground duels won before signing for Arsenal.",
+      "Iconic / Current Club: Arsenal"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Destiny Udogie",
+    "nationality": "Italy",
+    "position": "Defender",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 3,
+    "bonusClues": [
+      "Developed at Hellas Verona before shining in Serie A on loan at Udinese as a rampaging wing-back.",
+      "Became an instant Premier League revelation in Ange Postecoglou's inverted full-back system, earning his senior Italy debut in late 2023.",
+      "Wears shirt #38, athletic powerhouse who drives directly into central midfield positions with blistering acceleration and strength.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Pape Matar Sarr",
+    "nationality": "Senegal",
+    "position": "Midfielder",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 3,
+    "bonusClues": [
+      "Developed at the Generation Foot academy in Senegal before making an early European breakthrough in Ligue 1 with Metz.",
+      "Won the 2021 Africa Cup of Nations with Senegal and broke into Spurs' starting XI with dynamic box-to-box performances in 2023-24.",
+      "Wears shirt #29, energetic midfield engine celebrated for boundless stamina, rangy tackling, and late runs into the penalty box.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Archie Gray",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 3,
+    "bonusClues": [
+      "Comes from a famous Leeds United dynasty (great-nephew of Eddie Gray), breaking into Leeds' first team at just 17 in 2023-24.",
+      "Won the Championship Young Player of the Season before completing a £40 million summer 2024 transfer to Tottenham Hotspur.",
+      "Wears shirt #14, precocious versatile star comfortable at right-back, central midfield, or centre-back, renowned for maturity beyond his years.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Lucas Bergvall",
+    "nationality": "Sweden",
+    "position": "Midfielder",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 3,
+    "bonusClues": [
+      "Developed at Brommapojkarna before rising to stardom in the Swedish Allsvenskan with Djurgårdens IF.",
+      "Turned down a transfer approach from Barcelona to sign for Tottenham Hotspur in February 2024, debuting in the Premier League at 18.",
+      "Wears shirt #15, elegant 6ft 2in Scandinavian playmaker praised for effortless dribbling poise, visionary passing, and eye for goal.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Guglielmo Vicario",
+    "nationality": "Italy",
+    "position": "Goalkeeper",
+    "iconicClub": "Tottenham Hotspur",
+    "tier": 3,
+    "bonusClues": [
+      "Fought his way through the lower rungs of Italian football with Fontanafredda and Venezia before becoming a star at Empoli.",
+      "Arrived in the Premier League in 2023 and quickly earned the nickname 'Venom' for his extraordinary reflex saves.",
+      "Wears shirt #1, renowned for theatrical flying shot-stopping, intense emotional shouting, and brave sweeping outside the box.",
+      "Iconic / Current Club: Tottenham Hotspur"
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Morgan Gibbs-White",
+    "nationality": "England",
+    "position": "Midfielder",
+    "iconicClub": "Nottingham Forest",
+    "tier": 3,
+    "bonusClues": [
+      "Graduated from Wolves' academy, winning the 2017 U-17 World Cup with England before a transformative loan at Sheffield United.",
+      "Joined Nottingham Forest in a club-record deal in 2022, steering them to Premier League safety and earning a senior England call-up in 2024.",
+      "Wears shirt #10, talismanic creative focal point celebrated for vision, spinning turns, and cheeky finger-in-the-ears celebrations.",
+      "Iconic / Current Club: Nottingham Forest"
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Murillo",
+    "nationality": "Brazil",
+    "position": "Defender",
+    "iconicClub": "Nottingham Forest",
+    "tier": 3,
+    "bonusClues": [
+      "Played futsal and developed in Corinthians' youth setup in São Paulo, making only 27 senior appearances before moving to England in 2023.",
+      "Named Nottingham Forest Player of the Season in his debut 2023-24 campaign, attracting interest from Europe's biggest clubs.",
+      "Wears shirt #40, stocky left-footed Brazilian centre-back famous for thunderous long-range shots from his own half and heroic goal-line clearances.",
+      "Iconic / Current Club: Nottingham Forest"
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Callum Hudson-Odoi",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Nottingham Forest",
+    "tier": 3,
+    "bonusClues": [
+      "Came through Chelsea's academy from under-8 level, winning the Champions League and Europa League at Stamford Bridge.",
+      "Rejuvenated his career under Nuno Espírito Santo at Nottingham Forest, scoring 8 Premier League goals in 2023-24.",
+      "Wears shirt #14, direct and explosive left winger famous for cutting inside onto his right foot and curling shots into the far corner.",
+      "Iconic / Current Club: Nottingham Forest"
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Chris Wood",
+    "nationality": "New Zealand",
+    "position": "Forward",
+    "iconicClub": "Nottingham Forest",
+    "tier": 3,
+    "bonusClues": [
+      "Left New Zealand as a teenager to join West Bromwich Albion, going on to represent eight different English clubs.",
+      "Scored a memorable Boxing Day hat-trick against former club Newcastle in 2023 and reached double figures in six different PL seasons.",
+      "Wears shirt #11, veteran 6ft 3in target man renowned for clinical one-touch box finishing, aerial prowess, and hold-up play.",
+      "Iconic / Current Club: Nottingham Forest"
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Kaoru Mitoma",
+    "nationality": "Japan",
+    "position": "Forward",
+    "iconicClub": "Brighton & Hove Albion",
+    "tier": 3,
+    "bonusClues": [
+      "Famously wrote a university thesis on 1v1 dribbling at the University of Tsukuba before shining for Kawasaki Frontale in Japan.",
+      "Set the record for the most goals by a Japanese player in a single Premier League season (7 goals in 2022-23) for Brighton.",
+      "Wears shirt #22, world-famous for his scientific drop-of-the-shoulder acceleration and beating defenders from a static start.",
+      "Iconic / Current Club: Brighton & Hove Albion"
+    ]
+  },
+  {
+    "id": 120,
+    "name": "João Pedro",
+    "nationality": "Brazil",
+    "position": "Forward",
+    "iconicClub": "Brighton & Hove Albion",
+    "tier": 3,
+    "bonusClues": [
+      "Rose through Fluminense's youth ranks in Rio de Janeiro before establishing himself in England as a teenage star at Watford.",
+      "Top scorer for Brighton across all competitions in 2023-24 with 20 goals, including crucial late winners against Man United and Arsenal in 2024.",
+      "Wears shirt #9, versatile Brazilian attacker celebrated for silky dribbling, ice-cold penalty taking, and clutch stoppage-time goals.",
+      "Iconic / Current Club: Brighton & Hove Albion"
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Michu",
+    "nationality": "Spain",
+    "position": "Forward",
+    "iconicClub": "Swansea City",
+    "tier": 4,
+    "bonusClues": [
+      "Signed from Rayo Vallecano for just £2 million in 2012 in one of the biggest bargain transfers in Premier League history.",
+      "Scored 18 Premier League goals in his fairy-tale debut season and led his club to the 2013 League Cup trophy.",
+      "Wore shirt #9, famed for his twisting ear-swiveling celebration, celebrated as Erling Haaland's boyhood football idol.",
+      "Iconic / Primary Club: Swansea City"
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Peter Crouch",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Stoke City",
+    "tier": 4,
+    "bonusClues": [
+      "Overcame early skepticism to represent seven Premier League clubs, amassing over 100 Premier League goals.",
+      "Holds the all-time Premier League record for the most headed goals in history with 53 headed goals.",
+      "Stood 6ft 7in (2.01m), beloved for audacious volleys, bicycle kicks against Man City, and his legendary 'robot dance' celebration.",
+      "Iconic / Primary Club: Stoke City"
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Rory Delap",
+    "nationality": "Republic of Ireland",
+    "position": "Midfielder",
+    "iconicClub": "Stoke City",
+    "tier": 4,
+    "bonusClues": [
+      "Was a talented javelin champion in Cumbria as a youth, which gave him unprecedented shoulder and upper-body mechanics.",
+      "Turned standard throw-ins into flat, 40-meter guided artillery missiles that terrorized top-four defenses under Tony Pulis.",
+      "Wore shirt #24, famous for vigorously wiping the ball with a towel before catapulting supersonic trajectory throw-ins into the 6-yard box.",
+      "Iconic / Primary Club: Stoke City"
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Adel Taarabt",
+    "nationality": "Morocco",
+    "position": "Midfielder",
+    "iconicClub": "Queens Park Rangers",
+    "tier": 4,
+    "bonusClues": [
+      "Arrived in England via Tottenham Hotspur before taking Loftus Road by storm with unprecedented street flair.",
+      "Won the 2010-11 Championship Player of the Year, captaining his side to promotion with 19 goals and 21 assists.",
+      "Wore shirt #7, notorious for audacious nutmegs, unplayable elastico flicks, and pure unpredictable street genius on the pitch.",
+      "Iconic / Primary Club: Queens Park Rangers"
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Jay-Jay Okocha",
+    "nationality": "Nigeria",
+    "position": "Midfielder",
+    "iconicClub": "Bolton Wanderers",
+    "tier": 4,
+    "bonusClues": [
+      "Signed on a sensational free transfer from Paris Saint-Germain in 2002 to play under Sam Allardyce at the Reebok Stadium.",
+      "Captained Bolton to a League Cup final and historic European qualification, so good they named him twice.",
+      "Wore shirt #10, master of outrageous rainbow flicks over Ray Parlour, curling thunderbolt free-kicks, and radiant smiles.",
+      "Iconic / Primary Club: Bolton Wanderers"
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Tim Cahill",
+    "nationality": "Australia",
+    "position": "Midfielder",
+    "iconicClub": "Everton",
+    "tier": 4,
+    "bonusClues": [
+      "Paid his own airfare to travel to England at age 16 for a trial at Millwall, reaching the 2004 FA Cup final.",
+      "Scored 56 Premier League goals for Everton and is regarded as one of the deadliest aerial headers in league history despite standing just 5ft 10in.",
+      "Wore shirt #17, world-famous for running straight to the corner flag and shadow-boxing it after scoring.",
+      "Iconic / Primary Club: Everton"
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Morten Gamst Pedersen",
+    "nationality": "Norway",
+    "position": "Midfielder",
+    "iconicClub": "Blackburn Rovers",
+    "tier": 4,
+    "bonusClues": [
+      "Signed from Tromsø in 2004 as Graeme Souness's replacement for Damien Duff at Ewood Park.",
+      "Scored both goals in a famous 2-1 victory over Manchester United at Old Trafford in 2005 and became a fantasy football legend.",
+      "Wore shirt #12, famous for his bleached blonde hair, ferocious left-footed volleys, and pinpoint curling set-pieces.",
+      "Iconic / Primary Club: Blackburn Rovers"
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Papiss Cissé",
+    "nationality": "Senegal",
+    "position": "Forward",
+    "iconicClub": "Newcastle United",
+    "tier": 4,
+    "bonusClues": [
+      "Arrived from SC Freiburg in January 2012 to link up with international strike partner Demba Ba on Tyneside.",
+      "Scored 13 goals in his first 14 Premier League games, including an impossible physics-defying banana curve volley at Stamford Bridge.",
+      "Wore shirt #9, famous for speculative first-time volleys from absurd angles and an unstoppable half-season goal scoring rampage.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Demba Ba",
+    "nationality": "Senegal",
+    "position": "Forward",
+    "iconicClub": "Newcastle United",
+    "tier": 4,
+    "bonusClues": [
+      "Overcame a failed medical at Stoke City to sign for West Ham United before moving on a free transfer to Newcastle in 2011.",
+      "Scored 29 Premier League goals in 54 appearances for Newcastle before a move to Chelsea where he scored from the famous Steven Gerrard slip.",
+      "Wore shirt #19, known for acrobatic overhead kicks, an insatiable love for strawberry syrup, and predatory box movement.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Dimitri Payet",
+    "nationality": "France",
+    "position": "Midfielder",
+    "iconicClub": "West Ham United",
+    "tier": 4,
+    "bonusClues": [
+      "Hailed from the island of Réunion and worked as a retail clothing assistant while playing semi-pro at Nantes before starring at Marseille.",
+      "Named in the PFA Team of the Year in 2015-16, providing 12 assists and producing the final piece of magic at the Boleyn Ground.",
+      "Wore shirt #27, revered for physics-bending dipping free-kicks, rabona assists, and the famous 'We've got Payet' terrace anthem.",
+      "Iconic / Primary Club: West Ham United"
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Hatem Ben Arfa",
+    "nationality": "France",
+    "position": "Forward",
+    "iconicClub": "Newcastle United",
+    "tier": 4,
+    "bonusClues": [
+      "Part of the famed French 'Generation 1987' alongside Benzema and Nasri, graduating from the INF Clairefontaine academy.",
+      "Overcame a horrific double leg fracture to score two of the greatest solo goals in Premier League history against Blackburn and Bolton.",
+      "Wore shirt #10, unpredictable dribbling wizard capable of slaloming past five defenders from inside his own half.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Tugay Kerimoğlu",
+    "nationality": "Turkey",
+    "position": "Midfielder",
+    "iconicClub": "Blackburn Rovers",
+    "tier": 4,
+    "bonusClues": [
+      "Won 6 Turkish league titles and the UEFA Cup with Galatasaray and played for Rangers before moving to Lancashire in 2001.",
+      "Spent eight seasons pulling the strings in the Premier League, with Sir Alex Ferguson famously stating 'if he were ten years younger, he'd play for anyone'.",
+      "Wore shirt #5, known for smoking cigarettes before games, visionary no-look passing, and peeling off 30-yard thunderbolt volleys.",
+      "Iconic / Primary Club: Blackburn Rovers"
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Yakubu",
+    "nationality": "Nigeria",
+    "position": "Forward",
+    "iconicClub": "Portsmouth",
+    "tier": 4,
+    "bonusClues": [
+      "Started with Julius Berger in Nigeria and Maccabi Haifa in Israel before Harry Redknapp brought him to Portsmouth in 2003.",
+      "Scored 95 Premier League goals across spells with Portsmouth, Middlesbrough, Everton, and Blackburn Rovers.",
+      "Wore shirt #22, nicknamed 'The Yak', celebrated for ruthless low-maintenance finishing and the iconic chant 'Feed the Yak and he will score'.",
+      "Iconic / Primary Club: Portsmouth"
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Clint Dempsey",
+    "nationality": "United States",
+    "position": "Forward",
+    "iconicClub": "Fulham",
+    "tier": 4,
+    "bonusClues": [
+      "Grew up playing with Hispanic immigrant kids in a Nacogdoches trailer park in Texas before playing for New England Revolution in MLS.",
+      "Scored 50 Premier League goals for Fulham, including an unforgettable 2011-12 campaign with 17 league goals and a famous chip vs Juventus.",
+      "Wore shirt #23, nicknamed 'Deuce', known for gritty grit, hip-hop freestyling, and scoring off-the-cuff improvised goals.",
+      "Iconic / Primary Club: Fulham"
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Geovanni",
+    "nationality": "Brazil",
+    "position": "Midfielder",
+    "iconicClub": "Hull City",
+    "tier": 4,
+    "bonusClues": [
+      "Played for Barcelona and Benfica before moving to England with Manchester City and subsequently newly promoted Hull City in 2008.",
+      "Scored world-class 30-yard screamer goals against Arsenal at the Emirates and Tottenham at White Hart Lane in Hull's fairy-tale start.",
+      "Wore shirt #10, Brazilian samba playmaker famed for bending unstoppable long-range banana shots into the top corner.",
+      "Iconic / Primary Club: Hull City"
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Laurent Robert",
+    "nationality": "France",
+    "position": "Midfielder",
+    "iconicClub": "Newcastle United",
+    "tier": 4,
+    "bonusClues": [
+      "Born on Réunion island, he broke through at Montpellier and starred for Paris Saint-Germain before joining Bobby Robson's Newcastle in 2001.",
+      "Formed an electric attacking unit alongside Alan Shearer and Nolberto Solano, helping Newcastle finish in the top four.",
+      "Wore shirt #11, possessed the hardest left-footed shot in Premier League history, capable of decapitating balls on set-pieces and volleys.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Roque Santa Cruz",
+    "nationality": "Paraguay",
+    "position": "Forward",
+    "iconicClub": "Blackburn Rovers",
+    "tier": 4,
+    "bonusClues": [
+      "Discovered as a teenager at Olimpia before spending eight trophy-laden years at Bayern Munich winning the Champions League.",
+      "Exploded in his debut 2007-08 Premier League season under Mark Hughes, scoring 19 league goals (23 all competitions).",
+      "Wore shirt #9, handsome Paraguayan target man renowned for graceful aerial dominance, flick-ons, and clinical box headers.",
+      "Iconic / Primary Club: Blackburn Rovers"
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Asamoah Gyan",
+    "nationality": "Ghana",
+    "position": "Forward",
+    "iconicClub": "Sunderland",
+    "tier": 4,
+    "bonusClues": [
+      "Starred at the 2010 World Cup for Ghana and shone for Rennes in Ligue 1 before moving to the Stadium of Light for a club-record £13 million.",
+      "Formed a lethal partnership with Darren Bent and scored a last-gasp 94th-minute equalizer in the Tyne-Wear derby against Newcastle.",
+      "Wore shirt #33, famous for exuberant dancing goal celebrations at the corner flag and unpredictable dynamic striking flair.",
+      "Iconic / Primary Club: Sunderland"
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Pajtim Kasami",
+    "nationality": "Switzerland",
+    "position": "Midfielder",
+    "iconicClub": "Fulham",
+    "tier": 4,
+    "bonusClues": [
+      "Youth journeyman who developed with Grasshoppers, Liverpool, and Lazio before signing for Fulham in 2011.",
+      "Scored one of the greatest volleys in Premier League history at Selhurst Park in October 2013, chesting a 40-yard diagonal on the sprint and looping it home.",
+      "Wore shirt #8, powerful physical midfielder celebrated forever for that single moment of breathtaking technique.",
+      "Iconic / Primary Club: Fulham"
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Yannick Bolasie",
+    "nationality": "DR Congo",
+    "position": "Forward",
+    "iconicClub": "Crystal Palace",
+    "tier": 4,
+    "bonusClues": [
+      "Climbed the English football pyramid through non-league with Hillingdon Borough, Rushden & Diamonds, and Plymouth Argyle.",
+      "Formed a terrorizing winger duo with Wilfried Zaha, tearing full-backs apart on Crystal Palace's route to the 2016 FA Cup final.",
+      "Wore shirt #7, creator of the famous 'Bolasie Flick' 360-degree trick on the touchline against Tottenham.",
+      "Iconic / Primary Club: Crystal Palace"
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Wilfried Zaha",
+    "nationality": "Ivory Coast",
+    "position": "Forward",
+    "iconicClub": "Crystal Palace",
+    "tier": 4,
+    "bonusClues": [
+      "Joined Crystal Palace's academy at age 12, becoming Sir Alex Ferguson's final signing as Manchester United manager in 2013.",
+      "Returned to Selhurst Park to become Palace's all-time Premier League top scorer with 68 goals, almost single-handedly securing their top-flight survival year after year.",
+      "Wore shirt #11, talismanic winger renowned for ankle-breaking stepovers, winning fouls, and emotional fiery passion.",
+      "Iconic / Primary Club: Crystal Palace"
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Benni McCarthy",
+    "nationality": "South Africa",
+    "position": "Forward",
+    "iconicClub": "Blackburn Rovers",
+    "tier": 4,
+    "bonusClues": [
+      "Won the 2004 Champions League with Porto under José Mourinho before moving to Ewood Park for £2.5 million in 2006.",
+      "Finished as the second-highest scorer in the Premier League in 2006-07 with 18 league goals (behind only Didier Drogba).",
+      "Wore shirt #10, lethal penalty-box assassin celebrated for instinctive first-time finishes and acrobatic celebrations.",
+      "Iconic / Primary Club: Blackburn Rovers"
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Stiliyan Petrov",
+    "nationality": "Bulgaria",
+    "position": "Midfielder",
+    "iconicClub": "Aston Villa",
+    "tier": 4,
+    "bonusClues": [
+      "Won four Scottish league titles at Celtic under Martin O'Neill before following his manager to Villa Park in 2006.",
+      "Captained Aston Villa to three consecutive sixth-place finishes and a League Cup final; scored an iconic 47-yard volley against Derby County in 2008.",
+      "Wore shirt #19, nicknamed 'Stan', celebrated for inspirational leadership and honored by fans with a 19th-minute standing ovation after battling leukemia.",
+      "Iconic / Primary Club: Aston Villa"
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Nolberto Solano",
+    "nationality": "Peru",
+    "position": "Midfielder",
+    "iconicClub": "Newcastle United",
+    "tier": 4,
+    "bonusClues": [
+      "Played alongside Diego Maradona at Boca Juniors, who affectionately nicknamed him 'El Maestrito' (The Little Master).",
+      "Became the first Peruvian in Premier League history in 1998, racking up 49 goals and 62 assists across two spells on Tyneside.",
+      "Wore shirt #4 (and #7), famous for inch-perfect crosses onto Alan Shearer's head and playing the trumpet in a salsa band.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Kevin Phillips",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Sunderland",
+    "tier": 4,
+    "bonusClues": [
+      "Worked in a supermarket and played semi-pro non-league football for Baldock Town as a right-back before converting to striker at Watford.",
+      "Scored 30 Premier League goals in 1999-2000 to win the European Golden Shoe—remains the only Englishman in history to win it.",
+      "Wore shirt #10, celebrated for telepathic 'little and large' strike partnership with 6ft 4in Niall Quinn at the Stadium of Light.",
+      "Iconic / Primary Club: Sunderland"
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Shola Ameobi",
+    "nationality": "Nigeria",
+    "position": "Forward",
+    "iconicClub": "Newcastle United",
+    "tier": 4,
+    "bonusClues": [
+      "Moved to Newcastle from Nigeria as a young boy, coming through the club's youth academy to make his debut against Chelsea in 2000.",
+      "Spent 14 seasons at Newcastle, scoring 79 goals and earning cult status by scoring 7 times against arch-rivals Sunderland.",
+      "Wore shirt #23, affectionately nicknamed 'The Mackem Slayer', legendary for having one of the highest penalty conversion rates in Premier League history.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Brede Hangeland",
+    "nationality": "Norway",
+    "position": "Defender",
+    "iconicClub": "Fulham",
+    "tier": 4,
+    "bonusClues": [
+      "Born in Houston, Texas, but raised in Stavanger, Norway, he played for Viking and Copenhagen before Roy Hodgson signed him for Fulham in 2008.",
+      "Captained Fulham to the 2010 UEFA Europa League final and formed one of the Premier League's sturdiest defensive walls.",
+      "Wore shirt #5, towering 6ft 6in cultured centre-back known for calm clean tackling, gentlemanly sportsmanship, and set-piece headers.",
+      "Iconic / Primary Club: Fulham"
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Jussi Jääskeläinen",
+    "nationality": "Finland",
+    "position": "Goalkeeper",
+    "iconicClub": "Bolton Wanderers",
+    "tier": 4,
+    "bonusClues": [
+      "Signed for Bolton from VPS Vaasa in 1997 for just £100,000, going on to spend 15 years and make over 500 appearances for the Trotters.",
+      "Famously saved two penalties in the same match against Blackburn Rovers in 2006 to preserve a historic 1-0 victory.",
+      "Wore shirt #22, beloved for cat-like double reflexive saves from point-blank range and his iconic Finnish stoicism.",
+      "Iconic / Primary Club: Bolton Wanderers"
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Thomas Sørensen",
+    "nationality": "Denmark",
+    "position": "Goalkeeper",
+    "iconicClub": "Stoke City",
+    "tier": 4,
+    "bonusClues": [
+      "Signed by Peter Reid at Sunderland as Peter Schmeichel's national team successor before starring for Aston Villa and Stoke City.",
+      "Saved penalty kicks from Alan Shearer, Thierry Henry, and Cristiano Ronaldo across a distinguished 364-game Premier League career.",
+      "Wore shirt #29 (and #1), legendary shot-stopper who anchored the Britannia Stadium fortress under Tony Pulis.",
+      "Iconic / Primary Club: Stoke City"
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Sylvain Distin",
+    "nationality": "France",
+    "position": "Defender",
+    "iconicClub": "Everton",
+    "tier": 4,
+    "bonusClues": [
+      "Arrived in England with Newcastle United on loan from PSG before becoming a defensive pillar for Man City, Portsmouth, and Everton.",
+      "Holds the Premier League record for the most appearances by an overseas outfield player with 469 appearances.",
+      "Wore shirt #15, an athletic physical specimen blessed with incredible recovery pace and supreme longevity into his late thirties.",
+      "Iconic / Primary Club: Everton"
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Charlie Adam",
+    "nationality": "Scotland",
+    "position": "Midfielder",
+    "iconicClub": "Blackpool",
+    "tier": 4,
+    "bonusClues": [
+      "Rangers youth product who spearheaded Ian Holloway's fearless Blackpool side to Championship promotion in 2010.",
+      "Scored from a mind-blowing 66 yards inside his own half against Thibaut Courtois at Stamford Bridge in 2015.",
+      "Wore shirt #26, famous for his cultured left foot, booming cross-field Hollywood passes, and dangerous curling in-swinging corners.",
+      "Iconic / Primary Club: Blackpool"
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Grant Holt",
+    "nationality": "England",
+    "position": "Forward",
+    "iconicClub": "Norwich City",
+    "tier": 4,
+    "bonusClues": [
+      "Worked as a tyre fitter while playing non-league football for Workington, Halifax, and Barrow before climbing every tier of English football.",
+      "Scored 15 Premier League goals in 2011-12 for newly promoted Norwich City, finishing as the second-highest English scorer in the league.",
+      "Wore shirt #9, a throwback bruising physical target man who bullied centre-backs with brute strength and aerial dominance.",
+      "Iconic / Primary Club: Norwich City"
+    ]
+  },
+  {
+    "id": 153,
+    "name": "Duncan Ferguson",
+    "nationality": "Scotland",
+    "position": "Forward",
+    "iconicClub": "Everton",
+    "tier": 4,
+    "bonusClues": [
+      "Signed from Rangers in 1994, becoming an instant Goodison Park cult deity when he scored in a Merseyside derby win over Liverpool.",
+      "Scored 68 Premier League goals for Everton and won the 1995 FA Cup, famously serving as caretaker manager with passionate sideline theatrics.",
+      "Wore shirt #9, nicknamed 'Big Dunc', notorious for his terrifying physical aggression, blue sweatband on his wrist, and towering headers.",
+      "Iconic / Primary Club: Everton"
+    ]
+  },
+  {
+    "id": 154,
+    "name": "Juninho Paulista",
+    "nationality": "Brazil",
+    "position": "Midfielder",
+    "iconicClub": "Middlesbrough",
+    "tier": 4,
+    "bonusClues": [
+      "Sensational coup signing from São Paulo in 1995 that stunned English football, arriving in the icy northeast of England as a Brazilian superstar.",
+      "Had three separate spells on Teesside, winning the 2004 League Cup and crying on the pitch after relegation in 1997.",
+      "Wore shirt #10, nicknamed 'The Little Fella' (standing just 5ft 5in), revered for jinking hips, dribbling acceleration, and heart on his sleeve.",
+      "Iconic / Primary Club: Middlesbrough"
+    ]
+  },
+  {
+    "id": 155,
+    "name": "Fabricio Coloccini",
+    "nationality": "Argentina",
+    "position": "Defender",
+    "iconicClub": "Newcastle United",
+    "tier": 4,
+    "bonusClues": [
+      "Developed at Boca Juniors and AC Milan before establishing himself in La Liga with Deportivo La Coruña.",
+      "Captained Newcastle to a stunning fifth-place finish in 2011-12 and was named in the PFA Premier League Team of the Year.",
+      "Wears shirt #2, iconic Argentine defender with glorious curly locks, serenaded by the Toon Army with 'he wears a perm, he wears a perm'.",
+      "Iconic / Primary Club: Newcastle United"
+    ]
+  },
+  {
+    "id": 156,
+    "name": "Mark Viduka",
+    "nationality": "Australia",
+    "position": "Forward",
+    "iconicClub": "Leeds United",
+    "tier": 4,
+    "bonusClues": [
+      "Hailed from Melbourne Knights and Dinamo Zagreb before becoming Scottish Player of the Year at Celtic.",
+      "Scored all four goals in an unforgettable 4-3 victory over Liverpool at Elland Road in November 2000.",
+      "Wore shirt #9, renowned for extraordinary back-to-goal hold-up play, pirouettes in the box, and delicate outside-of-the-boot touches.",
+      "Iconic / Primary Club: Leeds United"
+    ]
+  },
+  {
+    "id": 157,
+    "name": "Jon Walters",
+    "nationality": "Republic of Ireland",
+    "position": "Forward",
+    "iconicClub": "Stoke City",
+    "tier": 4,
+    "bonusClues": [
+      "Began at Blackburn and Bolton before dropping into the lower leagues with Hull, Chester, and Ipswich Town.",
+      "The tireless workhorse engine of Tony Pulis's Stoke side, helping them reach the 2011 FA Cup final and the Europa League.",
+      "Wore shirt #19, famous for never-ending running, physical combat against defenders, and once scoring two own-goals and missing a penalty in a single match.",
+      "Iconic / Primary Club: Stoke City"
+    ]
+  },
+  {
+    "id": 158,
+    "name": "Ryan Shawcross",
+    "nationality": "England",
+    "position": "Defender",
+    "iconicClub": "Stoke City",
+    "tier": 4,
+    "bonusClues": [
+      "Manchester United academy graduate who joined Stoke City initially on loan in 2007 before captaining them for a decade.",
+      "Made over 400 appearances for Stoke, anchoring one of the most physically intimidating backlines in Premier League history.",
+      "Wore shirt #17, long-serving captain feared for uncompromising tough-tackling, blood-and-guts defending, and set-piece headers.",
+      "Iconic / Primary Club: Stoke City"
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Christopher Samba",
+    "nationality": "Congo",
+    "position": "Defender",
+    "iconicClub": "Blackburn Rovers",
+    "tier": 4,
+    "bonusClues": [
+      "Signed from Hertha BSC for just £450,000 after a successful trial under Mark Hughes at Ewood Park.",
+      "Anchor of Blackburn's defense for five years, famously utilized as an emergency striker by Sam Allardyce due to his aerial power.",
+      "Wore shirt #4, towering 6ft 4in brick-wall defender famous for bullet headers, crunching recovery slide challenges, and brute strength.",
+      "Iconic / Primary Club: Blackburn Rovers"
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Amr Zaki",
+    "nationality": "Egypt",
+    "position": "Forward",
+    "iconicClub": "Wigan Athletic",
+    "tier": 4,
+    "bonusClues": [
+      "Signed on loan from Zamalek in 2008 by Steve Bruce after firing Egypt to the 2008 Africa Cup of Nations title.",
+      "Exploded with 10 Premier League goals in his first 16 games, briefly sitting as the Premier League top scorer ahead of Rooney and Ronaldo.",
+      "Wore shirt #9, nicknamed 'The Bulldozer', immortalized by a stunning scissor-kick volley at Anfield before disappearing after going AWOL.",
+      "Iconic / Primary Club: Wigan Athletic"
+    ]
+  }
+]
