@@ -1,9 +1,9 @@
 export interface Footballer {
   id: number;
   name: string;
-  club: string;
   nationality: string;
   position: string;
+  club: string;
   bonusClues: string[];
 }
 
@@ -11,61 +11,66 @@ export const PLAYERS: Footballer[] = [
   {
     id: 1,
     name: "Erling Haaland",
-    club: "Manchester City",
     nationality: "Norway",
     position: "Forward",
+    club: "Manchester City",
     bonusClues: [
-      "Broke the record for most goals scored in a single 38-game Premier League season (36 goals).",
-      "Previously played for Borussia Dortmund and Red Bull Salzburg.",
-      "Won the continental treble (Premier League, FA Cup, Champions League) in his debut season in England.",
+      "Began his senior professional career at Bryne FK before developing under Ole Gunnar Solskjær at Molde.",
+      "Scored 86 goals in 89 games for Borussia Dortmund and won a continental treble in his debut season in England.",
+      "Wears shirt #9, renowned for explosive sprinting power, clinical finishing, and a meditative lotus celebration.",
+      "Plays for Manchester City.",
     ],
   },
   {
     id: 2,
     name: "Mohamed Salah",
-    club: "Liverpool",
     nationality: "Egypt",
     position: "Forward",
+    club: "Liverpool",
     bonusClues: [
-      "Nicknamed 'The Egyptian King' by the Anfield faithful.",
-      "Scored 32 Premier League goals in the 2017–18 campaign to win his first Premier League Golden Boot.",
-      "Previously played in the Premier League for Chelsea before thriving in Serie A with Fiorentina and Roma.",
+      "Started his career in Egypt with Al Mokawloon before moving to Europe with Swiss side FC Basel in 2012.",
+      "Had an earlier Premier League spell with Chelsea before thriving in Serie A with Fiorentina and Roma; later won the Champions League and Premier League.",
+      "Wears shirt #11, prolific left-footed inside forward famous for curling strikes into the top corner and a yoga tree pose celebration.",
+      "Plays for Liverpool.",
     ],
   },
   {
     id: 3,
     name: "Bukayo Saka",
-    club: "Arsenal",
     nationality: "England",
     position: "Forward",
+    club: "Arsenal",
     bonusClues: [
-      "Graduated from the club's Hale End academy and affectionately nicknamed 'Little Chilli'.",
-      "Named England Men's Player of the Year in both 2021–22 and 2022–23.",
-      "Wears the number 7 shirt and primarily operates as a left-footed right winger.",
+      "Joined his club's Hale End academy at age seven and made his senior first-team debut in the Europa League as a 17-year-old.",
+      "Won back-to-back England Men's Player of the Year awards (2021–22, 2022–23) and an FA Cup in 2020.",
+      "Wears shirt #7, dynamic right-winger known for balance, elite 1v1 dribbling, and affectionately nicknamed 'Little Chilli'.",
+      "Plays for Arsenal.",
     ],
   },
   {
     id: 4,
     name: "Kevin De Bruyne",
-    club: "Manchester City",
     nationality: "Belgium",
     position: "Midfielder",
+    club: "Manchester City",
     bonusClues: [
-      "Tied Thierry Henry's single-season Premier League assist record with 20 assists in 2019–20.",
-      "Two-time Premier League Player of the Season and two-time PFA Players' Player of the Year.",
-      "Signed from VfL Wolfsburg in 2015 after earlier spells with Genk, Chelsea, and Werder Bremen.",
+      "Started his professional journey at Genk before a stint at Chelsea and winning Bundesliga Player of the Year with Wolfsburg.",
+      "Two-time PFA Players' Player of the Year who tied the all-time Premier League single-season assist record with 20 assists in 2019–20.",
+      "Wears shirt #17, world-renowned playmaker famous for laser-guided through balls and whipped low crosses into the corridor of uncertainty.",
+      "Plays for Manchester City.",
     ],
   },
   {
     id: 5,
     name: "Son Heung-min",
-    club: "Tottenham Hotspur",
     nationality: "South Korea",
     position: "Forward",
+    club: "Tottenham Hotspur",
     bonusClues: [
-      "Won the Premier League Golden Boot for the 2021–22 season with 23 goals without scoring a single penalty.",
-      "Won the 2020 FIFA Puskás Award for an iconic solo goal against Burnley.",
-      "Appointed club captain in 2023 following Harry Kane's departure.",
+      "Moved to Germany as a 16-year-old to join Hamburger SV's youth academy before shining at Bayer Leverkusen.",
+      "Won the 2020 FIFA Puskás Award for an 80-meter solo goal and shared the 2021–22 Premier League Golden Boot with 23 non-penalty goals.",
+      "Wears shirt #7, lethal two-footed finisher who serves as club captain and celebrates goals with his iconic 'camera snapshot' pose.",
+      "Plays for Tottenham Hotspur.",
     ],
   },
 ];
