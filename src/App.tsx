@@ -1,483 +1,457 @@
-import { useState, useMemo, useRef, useEffect } from 'react'
-import { PLAYERS, type Footballer } from './data/players'
-import searchNamesData from './data/searchNames.json'
+import { useMemo, useState } from 'react'
 import './App.css'
+import {
+  CLUE_TITLES,
+  POINTS,
+  TIER_META,
+  drawPlayerForStreak,
+  findPlayerByName,
+  getStreakTier,
+  getSuggestions,
+  isCorrectGuess,
+  loadBestStreak,
+  saveBestStreak,
+  type Footballer,
+} from './game/engine'
 
-const searchNames: string[] = Array.from(
-  new Set([...PLAYERS.map((p) => p.name), ...(searchNamesData as string[])])
-).sort()
-
-const CLUE_TITLES = [
-  'Early Career & Trivia',
-  'Records & Career Transfers',
-  'Shirt Number & Playstyle',
-  'Current / Iconic Club Reveal',
-]
-
-const TIER_LABELS: Record<Footballer['tier'], string> = {
-  1: 'Tier 1: Icons',
-  2: 'Tier 2: Elite & Breakouts',
-  3: 'Tier 3: Legends',
-  4: 'Cult Heroes',
-}
-
-// Quick club affiliation directory for prominent players
-const CLUB_LOOKUP: Record<string, string> = {
-  // Arsenal
-  'thierry henry': 'Arsenal',
-  'bukayo saka': 'Arsenal',
-  'dennis bergkamp': 'Arsenal',
-  'patrick vieira': 'Arsenal',
-  'martin ødegaard': 'Arsenal',
-  'gabriel martinelli': 'Arsenal',
-  'william saliba': 'Arsenal',
-  'declan rice': 'Arsenal',
-  'gabriel jesus': 'Arsenal',
-  'kai havertz': 'Arsenal',
-  'ethan nwaneri': 'Arsenal',
-  // Manchester City
-  'erling haaland': 'Manchester City',
-  'kevin de bruyne': 'Manchester City',
-  'sergio agüero': 'Manchester City',
-  'david silva': 'Manchester City',
-  'vincent kompany': 'Manchester City',
-  'yaya touré': 'Manchester City',
-  'phil foden': 'Manchester City',
-  'bernardo silva': 'Manchester City',
-  'rodri': 'Manchester City',
-  'jack grealish': 'Manchester City',
-  // Manchester United
-  'wayne rooney': 'Manchester United',
-  'cristiano ronaldo': 'Manchester United',
-  'paul scholes': 'Manchester United',
-  'rio ferdinand': 'Manchester United',
-  'nemanja vidić': 'Manchester United',
-  'eric cantona': 'Manchester United',
-  'bruno fernandes': 'Manchester United',
-  'marcus rashford': 'Manchester United',
-  'kobbie mainoo': 'Manchester United',
-  'alejandro garnacho': 'Manchester United',
-  // Liverpool
-  'mohamed salah': 'Liverpool',
-  'steven gerrard': 'Liverpool',
-  'virgil van dijk': 'Liverpool',
-  'trent alexander-arnold': 'Liverpool',
-  'alisson becker': 'Liverpool',
-  'luis díaz': 'Liverpool',
-  'darwin núñez': 'Liverpool',
-  'alexis mac allister': 'Liverpool',
-  'dominik szoboszlai': 'Liverpool',
-  // Chelsea
-  'frank lampard': 'Chelsea',
-  'eden hazard': 'Chelsea',
-  'didier drogba': 'Chelsea',
-  'john terry': 'Chelsea',
-  'petr čech': 'Chelsea',
-  'cole palmer': 'Chelsea',
-  'enzo fernández': 'Chelsea',
-  'moisés caicedo': 'Chelsea',
-  'nicolas jackson': 'Chelsea',
-  // Tottenham
-  'son heung-min': 'Tottenham Hotspur',
-  'harry kane': 'Tottenham Hotspur',
-  'james maddison': 'Tottenham Hotspur',
-  'dejan kulusevski': 'Tottenham Hotspur',
-  'cristian romero': 'Tottenham Hotspur',
-  // Newcastle
-  'alan shearer': 'Newcastle United',
-  'alexander isak': 'Newcastle United',
-  'anthony gordon': 'Newcastle United',
-  'bruno guimarães': 'Newcastle United',
-  // Fulham
-  'oscar bobb': 'Fulham',
-  'emile smith rowe': 'Fulham',
-  'antonee robinson': 'Fulham',
-  // Stoke City
-  'peter crouch': 'Stoke City',
-  'rory delap': 'Stoke City',
-  // Swansea
-  'michu': 'Swansea City',
-  // QPR
-  'adel taarabt': 'Queens Park Rangers',
-}
+type Phase = 'playing' | 'roundWon' | 'gameOver'
 
 interface WrongGuess {
   name: string
-  hint: string
-  isSameClub: boolean
+  sameClub: boolean
 }
 
-function App() {
-  const [bank, setBank] = useState<number>(10)
-  const [streak, setStreak] = useState<number>(0)
-  const [playerIndex, setPlayerIndex] = useState<number>(0)
-  const [revealedCluesCount, setRevealedCluesCount] = useState<number>(0)
+const LOCKED_INITIAL = [false, false, false, false] as const
+
+function nextLockedIndex(unlocked: readonly boolean[]): number {
+  return unlocked.findIndex((value) => !value)
+}
+
+export default function App() {
+  const [bank, setBank] = useState<number>(POINTS.STARTING_BANK)
+  const [streak, setStreak] = useState(0)
+  const [best, setBest] = useState(() => loadBestStreak())
+  const [target, setTarget] = useState<Footballer>(() => drawPlayerForStreak(0, []))
+  const [usedIds, setUsedIds] = useState<number[]>(() => [target.id])
+  const [unlocked, setUnlocked] = useState<boolean[]>([...LOCKED_INITIAL])
   const [wrongGuesses, setWrongGuesses] = useState<WrongGuess[]>([])
-  const [gameState, setGameState] = useState<'PLAYING' | 'ROUND_WON' | 'GAME_OVER'>('PLAYING')
+  const [phase, setPhase] = useState<Phase>('playing')
+  const [query, setQuery] = useState('')
+  const [activeIndex, setActiveIndex] = useState(-1)
+  const [notice, setNotice] = useState('')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
-  const [query, setQuery] = useState<string>('')
-  const [selectedGuess, setSelectedGuess] = useState<string>('')
-  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false)
+  const suggestions = useMemo(() => getSuggestions(query), [query])
+  const tier = getStreakTier(streak)
+  const tierMeta = TIER_META[tier]
+  const unlockedCount = unlocked.filter(Boolean).length
+  const lockedIndex = nextLockedIndex(unlocked)
+  const allCluesOut = lockedIndex === -1
 
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const currentPlayer = PLAYERS[playerIndex]
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false)
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
-
-  // Filter top 6 autocomplete suggestions
-  const suggestions = useMemo(() => {
-    const trimmed = query.trim().toLowerCase()
-    if (!trimmed) return []
-    return searchNames
-      .filter((name) => name.toLowerCase().includes(trimmed))
-      .slice(0, 6)
-  }, [query])
-
-  // Reveal next clue
-  const handleRevealClue = () => {
-    if (gameState !== 'PLAYING' || revealedCluesCount >= 4) return
-    const newBank = bank - 2
-    setBank(newBank)
-    setRevealedCluesCount((prev) => Math.min(prev + 1, 4))
-    if (newBank <= 0) {
-      setGameState('GAME_OVER')
+  function pushBest(candidate: number): void {
+    if (candidate > best) {
+      setBest(candidate)
+      saveBestStreak(candidate)
     }
   }
 
-  // Handle select suggestion from dropdown
-  const handleSelectSuggestion = (name: string) => {
-    setQuery(name)
-    setSelectedGuess(name)
-    setIsDropdownOpen(false)
+  function handleBuyClue(): void {
+    if (phase !== 'playing' || allCluesOut) return
+    const nextBank = bank - POINTS.CLUE_COST
+    const nextUnlocked = [...unlocked]
+    nextUnlocked[lockedIndex] = true
+    setUnlocked(nextUnlocked)
+    setBank(nextBank)
+    setNotice('')
+    if (nextBank <= 0) {
+      setPhase('gameOver')
+      pushBest(streak)
+    }
   }
 
-  // Submit guess
-  const handleSubmitGuess = (e?: React.FormEvent) => {
-    if (e) e.preventDefault()
-    if (gameState !== 'PLAYING') return
+  function handleGuess(rawInput: string): void {
+    if (phase !== 'playing') return
+    const guess = rawInput.trim()
+    if (!guess) {
+      setNotice('Type a name or pick one from the dropdown.')
+      return
+    }
+    if (wrongGuesses.some((entry) => entry.name.toLowerCase() === guess.toLowerCase())) {
+      setNotice('You already tried that name — no points lost.')
+      return
+    }
 
-    const guessToSubmit = (selectedGuess || query).trim()
-    if (!guessToSubmit) return
-
-    const normalizedGuess = guessToSubmit.toLowerCase()
-    const targetName = currentPlayer.name.toLowerCase()
-    const isCorrect =
-      normalizedGuess === targetName ||
-      targetName.endsWith(normalizedGuess) ||
-      targetName.split(' ').includes(normalizedGuess)
-
-    if (isCorrect) {
-      setBank((prev) => prev + 10)
-      setStreak((prev) => prev + 1)
-      setGameState('ROUND_WON')
-      setIsDropdownOpen(false)
-    } else {
-      const newBank = bank - 2
-      setBank(newBank)
-
-      // Determine club hint
-      const matchedPlayer = PLAYERS.find(
-        (p) => p.name.toLowerCase() === guessToSubmit.toLowerCase()
-      )
-      const guessedClub = matchedPlayer?.iconicClub || CLUB_LOOKUP[guessToSubmit.toLowerCase()]
-      const isSameClub = Boolean(
-        guessedClub && guessedClub.toLowerCase() === currentPlayer.iconicClub.toLowerCase()
-      )
-
-      const hintText = isSameClub ? '🔥 Same Club!' : 'Different Club'
-
-      setWrongGuesses((prev) => [
-        ...prev,
-        { name: guessToSubmit, hint: hintText, isSameClub },
-      ])
+    if (isCorrectGuess(guess, target)) {
+      const nextBank = bank + POINTS.CORRECT_GUESS
+      const nextStreak = streak + 1
+      setBank(nextBank)
+      setStreak(nextStreak)
+      pushBest(nextStreak)
+      setPhase('roundWon')
       setQuery('')
-      setSelectedGuess('')
-      setIsDropdownOpen(false)
+      setActiveIndex(-1)
+      setDropdownOpen(false)
+      setNotice('')
+      return
+    }
 
-      if (newBank <= 0) {
-        setGameState('GAME_OVER')
-      }
+    const guessedPlayer = findPlayerByName(guess)
+    const sameClub = guessedPlayer !== undefined && guessedPlayer.iconicClub === target.iconicClub
+    const nextBank = bank - POINTS.WRONG_GUESS
+    setWrongGuesses((previous) => [...previous, { name: guess, sameClub }])
+    setBank(nextBank)
+    setQuery('')
+    setActiveIndex(-1)
+    setDropdownOpen(false)
+    setNotice('')
+    if (nextBank <= 0) {
+      setPhase('gameOver')
+      pushBest(streak)
     }
   }
 
-  // Give Up
-  const handleGiveUp = () => {
-    if (gameState !== 'PLAYING') return
-    setGameState('GAME_OVER')
-  }
-
-  // Advance to next player (Round Won)
-  const handleNextPlayer = () => {
-    setPlayerIndex((prev) => (prev + 1) % PLAYERS.length)
-    setRevealedCluesCount(0)
+  function handleNextPlayer(): void {
+    const nextStreak = streak
+    const next = drawPlayerForStreak(nextStreak, usedIds)
+    setTarget(next)
+    setUsedIds((previous) => (previous.includes(next.id) ? previous : [...previous, next.id]))
+    setUnlocked([...LOCKED_INITIAL])
     setWrongGuesses([])
     setQuery('')
-    setSelectedGuess('')
-    setIsDropdownOpen(false)
-    setGameState('PLAYING')
+    setActiveIndex(-1)
+    setDropdownOpen(false)
+    setNotice('')
+    setPhase('playing')
   }
 
-  // Restart after Game Over
-  const handleRestartGame = () => {
-    setBank(10)
+  function handleGiveUp(): void {
+    if (phase !== 'playing') return
+    pushBest(streak)
+    setPhase('gameOver')
+  }
+
+  function handleRestart(): void {
+    const fresh = drawPlayerForStreak(0, [])
+    setBank(POINTS.STARTING_BANK)
     setStreak(0)
-    setPlayerIndex((prev) => (prev + 1) % PLAYERS.length)
-    setRevealedCluesCount(0)
+    setTarget(fresh)
+    setUsedIds([fresh.id])
+    setUnlocked([...LOCKED_INITIAL])
     setWrongGuesses([])
     setQuery('')
-    setSelectedGuess('')
-    setIsDropdownOpen(false)
-    setGameState('PLAYING')
+    setActiveIndex(-1)
+    setDropdownOpen(false)
+    setNotice('')
+    setPhase('playing')
   }
+
+  function pickSuggestion(name: string): void {
+    setQuery(name)
+    setDropdownOpen(false)
+    setActiveIndex(-1)
+    handleGuess(name)
+  }
+
+  const bankDanger = bank <= POINTS.WRONG_GUESS + POINTS.CLUE_COST
+  const bankMeterWidth = Math.max(0, Math.min(100, (bank / (POINTS.STARTING_BANK * 2)) * 100))
 
   return (
-    <div className="game-container">
-      {/* Top HUD: Bank, Streak & Tier */}
-      <div className="hud-bar">
-        <div className={`hud-badge bank-badge ${bank <= 4 ? 'bank-danger' : ''}`}>
-          <span className="hud-icon">💰</span>
-          <span className="hud-label">Bank:</span>
-          <span className="hud-value">{bank} pts</span>
-        </div>
+    <main className="game-container">
+      <header className="folio">
+        <h1 className="folio-title">Guess the Premier League Footballer</h1>
+        <p className="folio-meta">{tierMeta.label}</p>
+      </header>
 
-        <div className="hud-badge streak-badge">
-          <span className="hud-icon">🔥</span>
-          <span className="hud-label">Streak:</span>
-          <span className="hud-value">{streak}</span>
-        </div>
+      <p className="question">
+        Who
+        <br />
+        is it?
+      </p>
 
-        <div className="hud-badge tier-badge">
-          <span className="tier-pill">{TIER_LABELS[currentPlayer.tier]}</span>
+      <section className="stage" aria-label="Mystery player">
+        <div className="stage-grid">
+          <div className="stage-fact">
+            <span className="stage-label">Nationality</span>
+            <span className="stage-value">{target.nationality}</span>
+          </div>
+          <div className="stage-fact">
+            <span className="stage-label">Position</span>
+            <span className="stage-value">{target.position}</span>
+          </div>
+          <div className="stage-fact">
+            <span className="stage-label">Club</span>
+            <span className="stage-value">
+              {unlocked[3] ? (
+                target.iconicClub
+              ) : (
+                <span className="censor" aria-label="Redacted">
+                  <span className="censor-bar censor-bar-long" aria-hidden="true" />
+                  <span className="censor-bar censor-bar-short" aria-hidden="true" />
+                </span>
+              )}
+            </span>
+          </div>
+        </div>
+        <p className="stage-foot">Free file · the rest costs you</p>
+      </section>
+
+      <div className="bank-strip" role="status" aria-label="Bank, streak and tier">
+        <div className={`bank-cell${bankDanger && phase === 'playing' ? ' bank-cell-danger' : ''}`}>
+          <span className="bank-label">Bank</span>
+          <span className="bank-numeral" key={bank}>
+            {bank}
+          </span>
+          <span className="bank-meter" aria-hidden="true">
+            <span className="bank-danger-zone" />
+            <span className="bank-meter-fill" style={{ width: `${bankMeterWidth}%` }} />
+          </span>
+        </div>
+        <div className="bank-cell">
+          <span className="bank-label">Streak</span>
+          <span className="bank-numeral bank-numeral-small streak-pop" key={streak}>
+            {streak}
+          </span>
+          <span className="bank-sub">Best {best}</span>
+        </div>
+        <div className="bank-cell">
+          <span className="bank-label">Tier</span>
+          <span className="bank-tier">{tierMeta.short}</span>
+          <span className="bank-sub">{tierMeta.range}</span>
         </div>
       </div>
 
-      <header className="game-header">
-        <h1>⚽ Guess the Premier League Footballer</h1>
-        <p className="game-subtitle">Endless Survival • 10 Points to Start • Don't Go Bankrupt!</p>
-      </header>
+      <p className="rules-line">
+        <span>
+          <strong>−{POINTS.CLUE_COST}</strong> per clue
+        </span>
+        <span aria-hidden="true"> / </span>
+        <span>
+          <strong>−{POINTS.WRONG_GUESS}</strong> per miss
+        </span>
+        <span aria-hidden="true"> / </span>
+        <span>
+          <strong>+{POINTS.CORRECT_GUESS}</strong> per hit
+        </span>
+      </p>
 
-      {/* ROUND WON BANNER */}
-      {gameState === 'ROUND_WON' && (
-        <div className="status-modal round-won-modal">
-          <div className="status-header">
-            <span className="status-emoji">🎉</span>
-            <h2>GET IN! CORRECT GUESS!</h2>
-          </div>
-          <p className="status-player-name">{currentPlayer.name}</p>
-          <p className="status-player-club">Iconic Club: <strong>{currentPlayer.iconicClub}</strong></p>
-
-          <div className="status-rewards">
-            <div className="reward-chip">+10 Points Banked 💰</div>
-            <div className="reward-chip">Streak: {streak} 🔥</div>
-          </div>
-
-          <button type="button" className="btn-primary btn-large" onClick={handleNextPlayer}>
-            Next Player ➔
-          </button>
+      <section className="slips" aria-label="Clue feed">
+        <div className="slips-head">
+          <h2 className="slips-title">Clue feed</h2>
+          <span className="slips-count">
+            {unlockedCount}/{POINTS.CLUE_COUNT} open
+          </span>
         </div>
-      )}
-
-      {/* GAME OVER BANNER */}
-      {gameState === 'GAME_OVER' && (
-        <div className="status-modal game-over-modal">
-          <div className="status-header">
-            <span className="status-emoji">💀</span>
-            <h2>GAME OVER</h2>
-          </div>
-          <p className="status-subtext">
-            {bank <= 0 ? 'Your bank reached 0 points!' : 'You gave up this round.'}
-          </p>
-
-          <div className="revealed-player-box">
-            <span className="revealed-label">The mystery footballer was:</span>
-            <span className="revealed-name">{currentPlayer.name}</span>
-            <span className="revealed-club">{currentPlayer.iconicClub} • {currentPlayer.position}</span>
-          </div>
-
-          <div className="final-stats">
-            <span>Final Streak: <strong>{streak}</strong></span>
-          </div>
-
-          <button type="button" className="btn-primary btn-large btn-restart" onClick={handleRestartGame}>
-            🔄 Restart Run (10 pts)
-          </button>
-        </div>
-      )}
-
-      {/* MAIN GAME CARD */}
-      <main className="clue-card">
-        {/* Base Clues: Nationality & Position (Club is intentionally hidden!) */}
-        <section className="clues-section base-clues-section">
-          <div className="section-title-row">
-            <h2 className="card-title">Base Clues</h2>
-            <span className="free-tag">Always Visible</span>
-          </div>
-          <div className="base-clues-grid">
-            <div className="base-clue-item">
-              <span className="clue-label">Nationality</span>
-              <span className="clue-value">{currentPlayer.nationality}</span>
-            </div>
-            <div className="base-clue-item">
-              <span className="clue-label">Position</span>
-              <span className="clue-value">{currentPlayer.position}</span>
-            </div>
-            <div className="base-clue-item club-hidden-item">
-              <span className="clue-label">Current Club</span>
-              <span className="clue-value hidden-val">🔒 Locked (Clue 4)</span>
-            </div>
-          </div>
-        </section>
-
-        {/* 4 Progressive Clues */}
-        <section className="clues-section progressive-section">
-          <div className="section-title-row">
-            <h2 className="card-title">Progressive Clues Ladder</h2>
-            <span className="clues-count-tag">{revealedCluesCount} of 4 Unlocked</span>
-          </div>
-
-          <div className="progressive-clues-list">
-            {currentPlayer.bonusClues.map((clue, idx) => {
-              const isUnlocked = idx < revealedCluesCount
-              return (
-                <div
-                  key={idx}
-                  className={`progressive-clue-item ${isUnlocked ? 'unlocked' : 'locked'}`}
-                >
-                  <div className="clue-item-header">
-                    <span className="clue-tier-indicator">
-                      {isUnlocked ? '🔓' : '🔒'} Clue {idx + 1}: {CLUE_TITLES[idx]}
-                    </span>
-                    <span className="clue-cost-tag">{isUnlocked ? 'Unlocked' : '-2 pts'}</span>
-                  </div>
-
-                  {isUnlocked ? (
-                    <p className="clue-text">{clue}</p>
-                  ) : (
-                    <p className="clue-placeholder">Purchase this clue to reveal intel.</p>
-                  )}
-                </div>
-              )
-            })}
-          </div>
-
-          {gameState === 'PLAYING' && (
-            <div className="clue-action-row">
-              <button
-                type="button"
-                className="btn-reveal-clue"
-                onClick={handleRevealClue}
-                disabled={revealedCluesCount >= 4 || bank < 2}
+        <ol className="slips-list">
+          {CLUE_TITLES.map((title, index) => {
+            const isOpen = unlocked[index] ?? false
+            const isArmed = !isOpen && index === lockedIndex && phase === 'playing'
+            return (
+              <li
+                key={title}
+                className={`slip${isOpen ? ' slip-open' : ''}${isArmed ? ' slip-armed' : ''}`}
               >
-                {revealedCluesCount >= 4
-                  ? 'All 4 Clues Revealed'
-                  : `🔓 Reveal Clue ${revealedCluesCount + 1} (-2 pts)`}
-              </button>
-            </div>
-          )}
-        </section>
-
-        {/* Guessing Input & Autocomplete Dropdown */}
-        {gameState === 'PLAYING' && (
-          <section className="guess-section">
-            <h2 className="card-title">Identify Player</h2>
-
-            <form onSubmit={handleSubmitGuess} className="guess-form">
-              <div className="autocomplete-container" ref={dropdownRef}>
-                <div className="input-wrapper">
-                  <span className="search-icon">🔍</span>
-                  <input
-                    type="text"
-                    className="guess-input"
-                    placeholder="Type player name (e.g. Haaland, Henry...)"
-                    value={query}
-                    onChange={(e) => {
-                      setQuery(e.target.value)
-                      setSelectedGuess(e.target.value)
-                      setIsDropdownOpen(true)
-                    }}
-                    onFocus={() => {
-                      if (query.trim()) setIsDropdownOpen(true)
-                    }}
-                  />
-                  {query && (
-                    <button
-                      type="button"
-                      className="btn-clear"
-                      onClick={() => {
-                        setQuery('')
-                        setSelectedGuess('')
-                        setIsDropdownOpen(false)
-                      }}
-                    >
-                      ✕
-                    </button>
+                <span className="slip-num" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="slip-body">
+                  <div className="slip-head">
+                    <span className="slip-title">{title}</span>
+                    <span className="slip-price">{isOpen ? 'Opened' : `−${POINTS.CLUE_COST}`}</span>
+                  </div>
+                  {isOpen ? (
+                    <p className="slip-text">{target.bonusClues[index]}</p>
+                  ) : (
+                    <p className="slip-locked">
+                      {isArmed ? 'This one is ready to open.' : 'Opens in order.'}
+                    </p>
                   )}
                 </div>
+              </li>
+            )
+          })}
+        </ol>
+        <button
+          type="button"
+          className="slip-action"
+          onClick={handleBuyClue}
+          disabled={phase !== 'playing' || allCluesOut}
+        >
+          {allCluesOut ? 'All clues open' : `Open clue ${unlockedCount + 1} · −${POINTS.CLUE_COST}`}
+        </button>
+      </section>
 
-                {isDropdownOpen && suggestions.length > 0 && (
-                  <ul className="dropdown-suggestions">
-                    {suggestions.map((name, idx) => (
-                      <li
-                        key={idx}
-                        className="suggestion-item"
-                        onClick={() => handleSelectSuggestion(name)}
-                      >
-                        <span className="suggestion-name">{name}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-
-              <div className="form-actions">
-                <button
-                  type="submit"
-                  className="btn-primary btn-submit"
-                  disabled={!query.trim()}
-                >
-                  Submit Guess
-                </button>
+      <section className="coupon" aria-label="Make your guess">
+        <form
+          className="guess-form"
+          onSubmit={(event) => {
+            event.preventDefault()
+            if (activeIndex >= 0 && suggestions[activeIndex] !== undefined) {
+              pickSuggestion(suggestions[activeIndex])
+            } else {
+              handleGuess(query)
+            }
+          }}
+        >
+          <div className="autocomplete-container">
+            <div className="input-wrapper">
+              <svg className="search-icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+                <circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" strokeWidth="2" />
+                <line x1="12.5" y1="12.5" x2="16.5" y2="16.5" stroke="currentColor" strokeWidth="2" />
+              </svg>
+              <input
+                className="guess-input"
+                type="text"
+                value={query}
+                placeholder="Search a footballer…"
+                aria-label="Search a footballer"
+                autoComplete="off"
+                disabled={phase !== 'playing'}
+                onChange={(event) => {
+                  setQuery(event.target.value)
+                  setActiveIndex(-1)
+                  setDropdownOpen(true)
+                }}
+                onFocus={() => setDropdownOpen(true)}
+                onBlur={() => {
+                  window.setTimeout(() => setDropdownOpen(false), 120)
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === 'ArrowDown' && suggestions.length > 0) {
+                    event.preventDefault()
+                    setActiveIndex((previous) => (previous + 1) % suggestions.length)
+                  } else if (event.key === 'ArrowUp' && suggestions.length > 0) {
+                    event.preventDefault()
+                    setActiveIndex((previous) =>
+                      previous <= 0 ? suggestions.length - 1 : previous - 1,
+                    )
+                  } else if (event.key === 'Escape') {
+                    setDropdownOpen(false)
+                    setActiveIndex(-1)
+                  }
+                }}
+              />
+              {query && (
                 <button
                   type="button"
-                  className="btn-giveup"
-                  onClick={handleGiveUp}
+                  className="btn-clear"
+                  aria-label="Clear search"
+                  onClick={() => {
+                    setQuery('')
+                    setActiveIndex(-1)
+                  }}
                 >
-                  Give Up
+                  ✕
                 </button>
-              </div>
-            </form>
-
-            {/* Wrong Guesses & Directional Hints */}
-            {wrongGuesses.length > 0 && (
-              <div className="wrong-guesses-container">
-                <span className="wrong-guesses-title">Previous Guesses:</span>
-                <div className="wrong-guesses-list">
-                  {wrongGuesses.map((guess, idx) => (
-                    <div
-                      key={idx}
-                      className={`wrong-guess-badge ${guess.isSameClub ? 'same-club-badge' : 'diff-club-badge'}`}
+              )}
+            </div>
+            {dropdownOpen && suggestions.length > 0 && phase === 'playing' && (
+              <ul className="dropdown-suggestions" role="listbox" aria-label="Player suggestions">
+                {suggestions.map((name, index) => {
+                  const meta = findPlayerByName(name)
+                  return (
+                    <li
+                      key={name}
+                      role="option"
+                      aria-selected={index === activeIndex}
+                      className={`suggestion-item${index === activeIndex ? ' active' : ''}`}
+                      onMouseDown={(event) => {
+                        event.preventDefault()
+                        pickSuggestion(name)
+                      }}
+                      onMouseEnter={() => setActiveIndex(index)}
                     >
-                      <span className="guess-name">❌ {guess.name} (-2 pts)</span>
-                      <span className="guess-hint">— {guess.hint}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                      <span>{name}</span>
+                      {meta !== undefined && (
+                        <span className="suggestion-meta">
+                          {meta.position} · {meta.iconicClub}
+                        </span>
+                      )}
+                    </li>
+                  )
+                })}
+              </ul>
             )}
-          </section>
+            {dropdownOpen && suggestions.length === 0 && query.trim() !== '' && phase === 'playing' && (
+              <div className="suggestions-empty">No matches — check the spelling.</div>
+            )}
+          </div>
+          <div className="form-actions">
+            <button type="submit" className="btn-submit" disabled={phase !== 'playing' || !query.trim()}>
+              Submit guess <span className="btn-cost">−{POINTS.WRONG_GUESS} if wrong</span>
+            </button>
+            <button
+              type="button"
+              className="btn-giveup"
+              onClick={handleGiveUp}
+              disabled={phase !== 'playing'}
+            >
+              Give up
+            </button>
+          </div>
+        </form>
+        {notice && (
+          <p className="form-error" role="alert">
+            {notice}
+          </p>
         )}
-      </main>
-    </div>
+
+        {wrongGuesses.length > 0 && (
+          <div className="ledger">
+            <p className="ledger-title">Misses ({wrongGuesses.length})</p>
+            <ul className="ledger-list">
+              {wrongGuesses.map((entry) => (
+                <li
+                  key={`${entry.name.toLowerCase()}`}
+                  className={`ledger-row${entry.sameClub ? ' ledger-row-hot' : ''}`}
+                >
+                  <span className="ledger-name">
+                    {entry.name} <span className="ledger-cost">−{POINTS.WRONG_GUESS}</span>
+                  </span>
+                  <span className="ledger-hint">
+                    {entry.sameClub ? 'Same club — close' : 'Different club'}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </section>
+
+      {phase !== 'playing' && (
+        <div className="takeover" role="dialog" aria-modal="true">
+          <div className="takeover-inner">
+            {phase === 'roundWon' ? (
+              <section aria-live="polite">
+                <p className="takeover-kicker">Correct call</p>
+                <h2 className="takeover-name">{target.name}</h2>
+                <p className="takeover-meta">
+                  {target.nationality} · {target.position} · {target.iconicClub}
+                </p>
+                <p className="takeover-reward">
+                  +{POINTS.CORRECT_GUESS} banked · Streak {streak}
+                </p>
+                <button type="button" className="takeover-action" onClick={handleNextPlayer} autoFocus>
+                  Next player
+                </button>
+              </section>
+            ) : (
+              <section aria-live="polite">
+                <p className="takeover-kicker takeover-kicker-danger">Full time</p>
+                <h2 className="takeover-name">{target.name}</h2>
+                <p className="takeover-meta">
+                  {target.nationality} · {target.position} · {target.iconicClub}
+                </p>
+                <p className="takeover-reward">
+                  Streak {streak} · Bank {bank} · Best {Math.max(best, streak)}
+                </p>
+                <button type="button" className="takeover-action" onClick={handleRestart} autoFocus>
+                  Restart game
+                </button>
+              </section>
+            )}
+          </div>
+        </div>
+      )}
+    </main>
   )
 }
-
-export default App
