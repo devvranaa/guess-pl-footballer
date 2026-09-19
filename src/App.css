@@ -40,7 +40,7 @@
 /* The question: poster scale */
 .question {
   font-family: var(--display);
-  font-size: clamp(3.5rem, 13vw, 7rem);
+  font-size: clamp(2.75rem, 9vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -150,6 +150,21 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(244, 237, 222, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bank-low {
+  font-family: var(--condensed);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 2px 8px;
 }
 
 .bank-numeral {
@@ -191,15 +206,6 @@
   margin-top: 10px;
   background: rgba(244, 237, 222, 0.15);
   overflow: hidden;
-}
-
-.bank-danger-zone {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 25%;
-  background: rgba(230, 59, 31, 0.45);
 }
 
 .bank-meter-fill {
@@ -346,27 +352,45 @@
   border-color: var(--ink);
 }
 
+/* Armed row: next clue up. Paper card with a marigold notch so the
+   bank strip stays the only dark mass. The whole row is one button. */
 .slip-armed {
-  background: var(--ink);
-  color: var(--paper);
+  display: block;
+  padding: 0;
+  box-shadow: inset 6px 0 0 var(--marigold);
+}
+
+.slip-hit {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 20px 16px 0;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.slip-hit:hover {
+  background: var(--paper-deep);
 }
 
 .slip-armed .slip-num {
-  color: var(--paper);
-}
-
-.slip-armed .slip-title {
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .slip-armed .slip-locked {
-  color: rgba(244, 237, 222, 0.75);
+  color: var(--ink);
+  font-weight: 600;
 }
 
 .slip-armed .slip-price {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-ink);
+  background: var(--marigold);
+  border-color: var(--marigold);
+  color: var(--ink);
 }
 
 .slip-action {
@@ -457,7 +481,10 @@
   font-weight: 700;
   color: var(--muted);
   cursor: pointer;
-  padding: 6px 8px;
+  padding: 10px 12px;
+  margin: -6px -8px -6px 0;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 4px;
 }
 
@@ -467,20 +494,18 @@
 }
 
 .dropdown-suggestions {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  right: 0;
+  /* In-flow (not overlaid): an absolutely-positioned list would cover the
+     Submit / Give up row and steal taps meant for those controls. Expanding
+     in place keeps every suggestion and every action hittable. */
+  margin: 8px 0 0;
   background: var(--card);
   border: 2px solid var(--line-strong);
   border-radius: 6px;
   list-style: none;
   padding: 4px;
-  margin: 0;
   max-height: 264px;
   overflow-y: auto;
   box-shadow: var(--shadow-hard-small);
-  z-index: 30;
   text-align: left;
   animation: rise-in 0.2s ease-out both;
 }
@@ -502,18 +527,9 @@
   background: var(--paper-deep);
 }
 
-.suggestion-meta {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
 .suggestions-empty {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  right: 0;
+  /* In-flow, matching the suggestions list: must not cover Submit. */
+  margin: 8px 0 0;
   background: var(--card);
   border: 2px solid var(--line-strong);
   border-radius: 6px;
@@ -521,7 +537,6 @@
   font-size: 0.88rem;
   color: var(--muted);
   box-shadow: var(--shadow-hard-small);
-  z-index: 30;
 }
 
 .form-actions {
@@ -558,10 +573,11 @@
 }
 
 .btn-submit:disabled {
-  background: transparent;
-  color: var(--muted);
-  border: 2px dashed var(--line-strong);
+  background: var(--ink);
+  color: var(--paper);
+  border: 2px solid var(--ink);
   box-shadow: none;
+  opacity: 0.45;
   cursor: not-allowed;
 }
 
@@ -594,6 +610,11 @@
 .btn-giveup:disabled {
   opacity: 0.35;
   cursor: not-allowed;
+}
+
+.btn-giveup-armed {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .form-error {
@@ -685,7 +706,7 @@
 }
 
 .ledger-row-hot .ledger-hint {
-  color: var(--accent);
+  color: #ffb4a2;
 }
 
 /* Takeover: the cinematic reveal */
@@ -745,7 +766,7 @@
   font-size: 1.3rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--paper);
   border-top: 2px solid rgba(244, 237, 222, 0.25);
   padding-top: 16px;
   font-variant-numeric: tabular-nums;
@@ -833,6 +854,14 @@
     gap: 20px;
   }
 
+  .folio-title {
+    font-size: 0.7rem;
+  }
+
+  .folio-meta {
+    font-size: 0.85rem;
+  }
+
   .stage {
     padding: 24px 20px;
   }
@@ -869,10 +898,16 @@
     padding: 14px 16px 14px 0;
   }
 
+  .slip-hit {
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    padding: 14px 16px 14px 0;
+  }
+
   .form-actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 4px;
+    gap: 12px;
   }
 
   .btn-giveup {

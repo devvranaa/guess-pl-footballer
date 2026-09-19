@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import './App.css'
 import {
   CLUE_TITLES,
@@ -40,6 +40,7 @@ export default function App() {
   const [activeIndex, setActiveIndex] = useState(-1)
   const [notice, setNotice] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [confirmGiveUp, setConfirmGiveUp] = useState(false)
 
   const suggestions = useMemo(() => getSuggestions(query), [query])
   const tier = getStreakTier(streak)
@@ -63,6 +64,7 @@ export default function App() {
     setUnlocked(nextUnlocked)
     setBank(nextBank)
     setNotice('')
+    setConfirmGiveUp(false)
     if (nextBank <= 0) {
       setPhase('gameOver')
       pushBest(streak)
@@ -104,15 +106,15 @@ export default function App() {
     setActiveIndex(-1)
     setDropdownOpen(false)
     setNotice('')
+    setConfirmGiveUp(false)
     if (nextBank <= 0) {
       setPhase('gameOver')
       pushBest(streak)
     }
   }
 
-  function handleNextPlayer(): void {
-    const nextStreak = streak
-    const next = drawPlayerForStreak(nextStreak, usedIds)
+  const handleNextPlayer = useCallback((): void => {
+    const next = drawPlayerForStreak(streak, usedIds)
     setTarget(next)
     setUsedIds((previous) => (previous.includes(next.id) ? previous : [...previous, next.id]))
     setUnlocked([...LOCKED_INITIAL])
@@ -121,12 +123,18 @@ export default function App() {
     setActiveIndex(-1)
     setDropdownOpen(false)
     setNotice('')
+    setConfirmGiveUp(false)
     setPhase('playing')
-  }
+  }, [streak, usedIds])
 
   function handleGiveUp(): void {
     if (phase !== 'playing') return
+    if (!confirmGiveUp) {
+      setConfirmGiveUp(true)
+      return
+    }
     pushBest(streak)
+    setConfirmGiveUp(false)
     setPhase('gameOver')
   }
 
@@ -142,6 +150,7 @@ export default function App() {
     setActiveIndex(-1)
     setDropdownOpen(false)
     setNotice('')
+    setConfirmGiveUp(false)
     setPhase('playing')
   }
 
@@ -151,6 +160,41 @@ export default function App() {
     setActiveIndex(-1)
     handleGuess(name)
   }
+
+  useEffect(() => {
+    if (phase === 'playing') return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    function onKeyDown(event: KeyboardEvent): void {
+      if (event.key === 'Escape' && phase === 'roundWon') {
+        handleNextPlayer()
+        return
+      }
+      if (event.key !== 'Tab') return
+      const takeover = document.querySelector('.takeover')
+      if (takeover === null) return
+      const focusable = Array.from(
+        takeover.querySelectorAll<HTMLElement>(
+          'button:not(:disabled), [href], input:not(:disabled), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((element) => element.offsetParent !== null)
+      if (focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [phase, handleNextPlayer])
 
   const bankDanger = bank <= POINTS.WRONG_GUESS + POINTS.CLUE_COST
   const bankMeterWidth = Math.max(0, Math.min(100, (bank / (POINTS.STARTING_BANK * 2)) * 100))
@@ -162,9 +206,9 @@ export default function App() {
         <p className="folio-meta">{tierMeta.label}</p>
       </header>
 
-      <p className="question">
+      <p className="question" aria-label="Who is it?">
         Who
-        <br />
+        <br aria-hidden="true" />
         is it?
       </p>
 
@@ -197,13 +241,14 @@ export default function App() {
 
       <div className="bank-strip" role="status" aria-label="Bank, streak and tier">
         <div className={`bank-cell${bankDanger && phase === 'playing' ? ' bank-cell-danger' : ''}`}>
-          <span className="bank-label">Bank</span>
+          <span className="bank-label">
+            Bank{bankDanger && phase === 'playing' ? <span className="bank-low">Low</span> : null}
+          </span>
           <span className="bank-numeral" key={bank}>
             {bank}
           </span>
-          <span className="bank-meter" aria-hidden="true">
-            <span className="bank-danger-zone" />
-            <span className="bank-meter-fill" style={{ width: `${bankMeterWidth}%` }} />
+          <span className="bank-meter" role="img" aria-label={`Bank ${bank} points`}>
+            <span className="bank-meter-fill" style={{ width: `${bankMeterWidth}%` }} aria-hidden="true" />
           </span>
         </div>
         <div className="bank-cell">
@@ -221,6 +266,8 @@ export default function App() {
       </div>
 
       <p className="rules-line">
+        <span>Protect the bank</span>
+        <span aria-hidden="true"> / </span>
         <span>
           <strong>−{POINTS.CLUE_COST}</strong> per clue
         </span>
@@ -245,11 +292,8 @@ export default function App() {
           {CLUE_TITLES.map((title, index) => {
             const isOpen = unlocked[index] ?? false
             const isArmed = !isOpen && index === lockedIndex && phase === 'playing'
-            return (
-              <li
-                key={title}
-                className={`slip${isOpen ? ' slip-open' : ''}${isArmed ? ' slip-armed' : ''}`}
-              >
+            const row = (
+              <>
                 <span className="slip-num" aria-hidden="true">
                   {String(index + 1).padStart(2, '0')}
                 </span>
@@ -262,10 +306,29 @@ export default function App() {
                     <p className="slip-text">{target.bonusClues[index]}</p>
                   ) : (
                     <p className="slip-locked">
-                      {isArmed ? 'This one is ready to open.' : 'Opens in order.'}
+                      {isArmed ? 'Tap to open this clue.' : 'Opens in order.'}
                     </p>
                   )}
                 </div>
+              </>
+            )
+            return (
+              <li
+                key={title}
+                className={`slip${isOpen ? ' slip-open' : ''}${isArmed ? ' slip-armed' : ''}`}
+              >
+                {isArmed ? (
+                  <button
+                    type="button"
+                    className="slip-hit"
+                    onClick={handleBuyClue}
+                    aria-label={`Open clue ${index + 1}: ${title}, costs ${POINTS.CLUE_COST} points`}
+                  >
+                    {row}
+                  </button>
+                ) : (
+                  row
+                )}
               </li>
             )
           })}
@@ -346,29 +409,21 @@ export default function App() {
             </div>
             {dropdownOpen && suggestions.length > 0 && phase === 'playing' && (
               <ul className="dropdown-suggestions" role="listbox" aria-label="Player suggestions">
-                {suggestions.map((name, index) => {
-                  const meta = findPlayerByName(name)
-                  return (
-                    <li
-                      key={name}
-                      role="option"
-                      aria-selected={index === activeIndex}
-                      className={`suggestion-item${index === activeIndex ? ' active' : ''}`}
-                      onMouseDown={(event) => {
-                        event.preventDefault()
-                        pickSuggestion(name)
-                      }}
-                      onMouseEnter={() => setActiveIndex(index)}
-                    >
-                      <span>{name}</span>
-                      {meta !== undefined && (
-                        <span className="suggestion-meta">
-                          {meta.position} · {meta.iconicClub}
-                        </span>
-                      )}
-                    </li>
-                  )
-                })}
+                {suggestions.map((name, index) => (
+                  <li
+                    key={name}
+                    role="option"
+                    aria-selected={index === activeIndex}
+                    className={`suggestion-item${index === activeIndex ? ' active' : ''}`}
+                    onMouseDown={(event) => {
+                      event.preventDefault()
+                      pickSuggestion(name)
+                    }}
+                    onMouseEnter={() => setActiveIndex(index)}
+                  >
+                    <span>{name}</span>
+                  </li>
+                ))}
               </ul>
             )}
             {dropdownOpen && suggestions.length === 0 && query.trim() !== '' && phase === 'playing' && (
@@ -381,11 +436,12 @@ export default function App() {
             </button>
             <button
               type="button"
-              className="btn-giveup"
+              className={`btn-giveup${confirmGiveUp ? ' btn-giveup-armed' : ''}`}
               onClick={handleGiveUp}
               disabled={phase !== 'playing'}
+              aria-live="polite"
             >
-              Give up
+              {confirmGiveUp ? 'Tap again to confirm full-time' : 'Give up'}
             </button>
           </div>
         </form>
