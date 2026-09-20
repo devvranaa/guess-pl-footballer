@@ -60,7 +60,7 @@
 
 .stage-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -82,10 +82,10 @@
 
 .stage-value {
   font-family: var(--display);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.05;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .censor {
@@ -237,6 +237,10 @@
   font-variant-numeric: tabular-nums;
 }
 
+.rules-line > span:not([aria-hidden='true']) {
+  white-space: nowrap;
+}
+
 /* Clue slips */
 .slips {
   display: flex;
@@ -335,6 +339,7 @@
 .slip-text {
   font-size: 1rem;
   line-height: 1.55;
+  max-width: 65ch;
 }
 
 .slip-locked {
@@ -375,6 +380,10 @@
 }
 
 .slip-hit:hover {
+  background: var(--paper-deep);
+}
+
+.slip-hit:active {
   background: var(--paper-deep);
 }
 
@@ -573,12 +582,15 @@
 }
 
 .btn-submit:disabled {
-  background: var(--ink);
-  color: var(--paper);
-  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--muted);
+  border: 2px solid var(--muted);
   box-shadow: none;
-  opacity: 0.45;
   cursor: not-allowed;
+}
+
+.btn-submit:disabled .btn-cost {
+  display: none;
 }
 
 .btn-cost {
@@ -796,6 +808,10 @@
   color: var(--ink);
 }
 
+.takeover-action:focus-visible {
+  outline-color: var(--marigold);
+}
+
 .streak-pop {
   animation: streak-pop 0.32s ease-out;
 }
@@ -910,8 +926,25 @@
     gap: 12px;
   }
 
+  .coupon {
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 2px solid var(--line-strong);
+    margin: 0 -16px;
+    padding: 12px 16px max(12px, env(safe-area-inset-bottom));
+  }
+
   .btn-giveup {
     text-align: center;
+    border: 2px solid var(--line-strong);
+    border-radius: 6px;
+    padding: 12px 16px;
+    min-height: 44px;
+    text-decoration: none;
+    color: var(--ink);
+    background: transparent;
   }
 
   .takeover {

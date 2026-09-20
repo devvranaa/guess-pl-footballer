@@ -1,12 +1,23 @@
 import playersData from '../data/players.json' with { type: 'json' }
 import searchNamesData from '../data/searchNames.json' with { type: 'json' }
 
+export const CURRENT_SEASON = '2026-27' as const
+
+export type Pool = 'current' | 'historical'
+
 export interface Footballer {
   id: number
   name: string
   nationality: string
   position: string
+  /** Historical / primary Premier League association. Never presented as current. */
   iconicClub: string
+  /** The player's actual current club, even if outside the PL. Null only when there is none (e.g. retired). */
+  currentClub: string | null
+  /** Season context for currentClub. */
+  clubSeason: typeof CURRENT_SEASON | null
+  /** 'current' = 2026-27 PL pool; 'historical' = former/out-of-PL pool. */
+  pool: Pool
   tier: 1 | 2 | 3 | 4
   bonusClues: [string, string, string, string]
 }
@@ -30,9 +41,51 @@ export function isCorrectGuess(guess: string, target: Footballer): boolean {
   return normalized === targetName
 }
 
+/** Club name shown in the redacted-club row and reveal screens. */
+export function getDisplayClubName(player: Footballer): string {
+  if (player.pool === 'current') return player.currentClub ?? player.iconicClub
+  return player.iconicClub
+}
+
+/** Era-aware club reveal line. Never presents an iconic club as current. */
+export function getClubReveal(player: Footballer): string {
+  if (player.pool === 'current') {
+    return `Current club (${CURRENT_SEASON}): ${player.currentClub ?? player.iconicClub}`
+  }
+  return `Iconic former club: ${player.iconicClub}`
+}
+
+/**
+ * Same-club hint semantics:
+ * - current/current: compare actual current clubs.
+ * - historical/historical: compare iconic PL associations.
+ * - mixed pools (or unknown guess): false — never equate eras.
+ */
+export function isSameClub(
+  guess: Footballer | undefined,
+  target: Footballer,
+): boolean {
+  if (guess === undefined) return false
+  if (guess.pool !== target.pool) return false
+  if (guess.pool === 'current') {
+    if (guess.currentClub === null || target.currentClub === null) return false
+    return guess.currentClub === target.currentClub
+  }
+  return guess.iconicClub === target.iconicClub
+}
+
+/**
+ * Names permanently excluded from active autocomplete (e.g. removed from the
+ * playable pool). Durable against searchNames.json regeneration, which rebuilds
+ * from the FPL API snapshot. Declared before SEARCH_NAMES (no TDZ).
+ */
+const EXCLUDED_FROM_SUGGESTIONS = new Set(['diogo jota'])
+
 export const SEARCH_NAMES: string[] = Array.from(
   new Set([...PLAYERS.map((player) => player.name), ...(searchNamesData as string[])]),
-).sort((a, b) => a.localeCompare(b))
+)
+  .filter((name) => !EXCLUDED_FROM_SUGGESTIONS.has(name.toLowerCase()))
+  .sort((a, b) => a.localeCompare(b))
 
 export function getSuggestions(query: string, limit = 6): string[] {
   const trimmed = query.trim().toLowerCase()
@@ -53,7 +106,7 @@ export const CLUE_TITLES = [
   'Early Career / Youth',
   'Records & Milestones',
   'Playstyle & Shirt Number',
-  'Current / Iconic Club',
+  'Club Reveal',
 ] as const
 
 export const TIER_META: Record<Tier, { label: string; short: string; range: string }> = {

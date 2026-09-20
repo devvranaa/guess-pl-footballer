@@ -6,9 +6,11 @@ import {
   TIER_META,
   drawPlayerForStreak,
   findPlayerByName,
+  getDisplayClubName,
   getStreakTier,
   getSuggestions,
   isCorrectGuess,
+  isSameClub,
   loadBestStreak,
   saveBestStreak,
   type Footballer,
@@ -98,7 +100,7 @@ export default function App() {
     }
 
     const guessedPlayer = findPlayerByName(guess)
-    const sameClub = guessedPlayer !== undefined && guessedPlayer.iconicClub === target.iconicClub
+    const sameClub = isSameClub(guessedPlayer, target)
     const nextBank = bank - POINTS.WRONG_GUESS
     setWrongGuesses((previous) => [...previous, { name: guess, sameClub }])
     setBank(nextBank)
@@ -226,7 +228,7 @@ export default function App() {
             <span className="stage-label">Club</span>
             <span className="stage-value">
               {unlocked[3] ? (
-                target.iconicClub
+                getDisplayClubName(target)
               ) : (
                 <span className="censor" aria-label="Redacted">
                   <span className="censor-bar censor-bar-long" aria-hidden="true" />
@@ -481,7 +483,7 @@ export default function App() {
                 <p className="takeover-kicker">Correct call</p>
                 <h2 className="takeover-name">{target.name}</h2>
                 <p className="takeover-meta">
-                  {target.nationality} · {target.position} · {target.iconicClub}
+                  {target.nationality} · {target.position} · {getDisplayClubName(target)}
                 </p>
                 <p className="takeover-reward">
                   +{POINTS.CORRECT_GUESS} banked · Streak {streak}
@@ -495,7 +497,7 @@ export default function App() {
                 <p className="takeover-kicker takeover-kicker-danger">Full time</p>
                 <h2 className="takeover-name">{target.name}</h2>
                 <p className="takeover-meta">
-                  {target.nationality} · {target.position} · {target.iconicClub}
+                  {target.nationality} · {target.position} · {getDisplayClubName(target)}
                 </p>
                 <p className="takeover-reward">
                   Streak {streak} · Bank {bank} · Best {Math.max(best, streak)}

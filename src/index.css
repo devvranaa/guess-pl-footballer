@@ -70,7 +70,7 @@ input {
 
 button:focus-visible,
 input:focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--ink);
   outline-offset: 2px;
 }
 
